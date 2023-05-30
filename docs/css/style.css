@@ -338,7 +338,7 @@ body::after {
 
 .wrapper::before {
   content: "";
-  background-image: url("img/LoopableNoise.gif");
+  background-image: url(/6147f4f88acce58cb08f.gif);
   background-size: 5.625rem;
   background-repeat: repeat;
   background-position: top;
@@ -1185,6 +1185,10 @@ body::after {
   .footer-btm__policy-txt {
     font-size: 1rem;
   }
+
+  .count-main {
+    row-gap: 3rem;
+  }
 }
 
 @media (min-width: 90em) {
@@ -1846,12 +1850,6 @@ body::after {
   }
 }
 
-@media (max-width: 58.125em) and (max-width: 22.5em) {
-  .count-main {
-    row-gap: 2rem;
-  }
-}
-
 @media (max-width: 37.5em) {
   .count-main {
     -webkit-column-gap: 1rem;
@@ -1961,6 +1959,10 @@ body::after {
 
   .title-main__txt {
     font-size: 2.5rem;
+  }
+
+  .count-main {
+    row-gap: 2rem;
   }
 
   .count-main__num {
@@ -2699,6 +2701,18 @@ body::after {
     }
 }
 
+@supports (row-gap: clamp( 2rem , 1.1176470588rem  +  3.9215686275vw , 3rem )) {
+    .count-main {
+      row-gap: clamp( 2rem , 1.1176470588rem  +  3.9215686275vw , 3rem );
+    }
+}
+
+@supports not (row-gap: clamp( 2rem , 1.1176470588rem  +  3.9215686275vw , 3rem )) {
+    .count-main {
+      row-gap: calc(2rem + 1 * (100vw - 22.5rem) / 25.5);
+    }
+}
+
 @supports (font-size: clamp( 3rem , 1.6764705882rem  +  5.8823529412vw , 4.5rem )) {
     .count-main__num {
       font-size: clamp( 3rem , 1.6764705882rem  +  5.8823529412vw , 4.5rem );
@@ -2838,26 +2852,6 @@ body::after {
       -webkit-column-gap: calc(1rem + 1.5 * (100vw - 37.5rem) / 10.5);
          -moz-column-gap: calc(1rem + 1.5 * (100vw - 37.5rem) / 10.5);
               column-gap: calc(1rem + 1.5 * (100vw - 37.5rem) / 10.5);
-    }
-}
-}
-
-@media (max-width: 58.125em) and (min-width: 48em) {
-  .count-main {
-    row-gap: 3rem;
-  }
-}
-
-@media (max-width: 58.125em) and (min-width: 22.5em) and (max-width: 48em) {
-@supports (row-gap: clamp( 2rem , 1.1176470588rem  +  3.9215686275vw , 3rem )) {
-    .count-main {
-      row-gap: clamp( 2rem , 1.1176470588rem  +  3.9215686275vw , 3rem );
-    }
-}
-
-@supports not (row-gap: clamp( 2rem , 1.1176470588rem  +  3.9215686275vw , 3rem )) {
-    .count-main {
-      row-gap: calc(2rem + 1 * (100vw - 22.5rem) / 25.5);
     }
 }
 }

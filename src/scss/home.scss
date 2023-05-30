@@ -237,9 +237,9 @@
   grid-template-columns: auto auto auto 1fr;
   @include adaptiveValue("column-gap", 104, 40, 0, 1440, 1045);
   @include adaptiveValue("column-gap", 40, 16, 3, 768, 600);
+  @include adaptiveValue("row-gap", 48, 32, 0, 768, 360);
   @media (max-width: em(930)){
       grid-template-columns: auto auto auto;
-      @include adaptiveValue("row-gap", 48, 32, 0, 768, 360);
   }
   @media (max-width: em(560)){
     grid-template-columns: auto auto;

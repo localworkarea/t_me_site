@@ -66,7 +66,7 @@
         transform: translateY(-64%);
         left: 11%;
     }
-    @media (max-width: em(930)){
+    @media (max-width: 930px){
       position: relative;
       top: unset;
       left: unset;
@@ -113,7 +113,7 @@
     align-items: center;
     justify-content: center;
 
-    @media (max-width:em(930)){
+    @media (max-width:930px){
       justify-self:  center;
       grid-column-start: 1;
       grid-column-end: 4;
@@ -150,7 +150,7 @@
   @media (max-width:1600px){
     flex-direction: row;
   }
-  @media (max-width: em(930)){
+  @media (max-width: 930px){
     flex-direction: column;
     align-items: center;
   }
@@ -163,7 +163,7 @@
           align-self: unset;
           padding-left: rem(25);
       }
-      @media (max-width: em(930)){
+      @media (max-width: 930px){
         padding-left: unset;
       }
     }
@@ -201,7 +201,7 @@
     line-height: calc(24/20);
     text-align: end;
     @include adaptiveValue("margin-bottom", 30, 24, 0, 1440, 768);
-    @media (max-width: em(930)){
+    @media (max-width: 930px){
         text-align: center;
     }
   }
@@ -210,7 +210,7 @@
     display: flex;
     justify-content: flex-end;
     column-gap: rem(32);
-    @media (max-width: em(930)){
+    @media (max-width: 930px){
         justify-content: center;
     }
     @media (max-width: em(490)){
@@ -238,7 +238,7 @@
   @include adaptiveValue("column-gap", 104, 40, 0, 1440, 1045);
   @include adaptiveValue("column-gap", 40, 16, 3, 768, 600);
   @include adaptiveValue("row-gap", 48, 32, 0, 768, 360);
-  @media (max-width: em(930)){
+  @media (max-width: 930px){
       grid-template-columns: auto auto auto;
   }
   @media (max-width: 560px){
@@ -253,7 +253,7 @@
       .count-main__txt {
         width: rem(93);
         padding-top: rem(22);
-        @media (max-width: em(930)){
+        @media (max-width: 930px){
             width: rem(75);
             align-self: flex-end;
             padding-top: unset;
@@ -264,7 +264,7 @@
     &:nth-child(2) {
       .count-main__txt {
         width: rem(204);
-        @media (max-width: em(930)){
+        @media (max-width: 930px){
             width: rem(100);
         }
       }
@@ -272,7 +272,7 @@
     &:nth-child(3) {
       .count-main__txt {
         width: rem(105);
-        @media (max-width: em(930)){
+        @media (max-width: 930px){
             width: rem(85);
         }
       }
@@ -290,14 +290,14 @@
     @include adaptiveValue("font-size", 20, 16, 0, 1440, 768);
     @include adaptiveValue("font-size", 16, 12, 3, 768, 360);
     line-height: calc(24/20);
-    @media (max-width: em(930)){
+    @media (max-width: 930px){
         line-height: calc(24/16);
     }
   }
   // .count-main__wrap
   &__wrap {
     padding-top: rem(22);
-    @media (max-width: em(930)){
+    @media (max-width: 930px){
         padding-top: unset;
 
         display: flex;

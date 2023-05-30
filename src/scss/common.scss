@@ -2,7 +2,7 @@
 .wrapper {
   &::before {
     content: '';
-    background-image: url("img/LoopableNoise.gif");
+    background-image: url("@img/LoopableNoise.gif");
     background-size: rem(90);
     background-repeat: repeat;
     background-position: top;

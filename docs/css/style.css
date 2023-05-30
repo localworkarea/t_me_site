@@ -338,7 +338,7 @@ body::after {
 
 .wrapper::before {
   content: "";
-  background-image: url(/6147f4f88acce58cb08f.gif);
+  background-image: url("img/LoopableNoise.gif");
   background-size: 5.625rem;
   background-repeat: repeat;
   background-position: top;
@@ -1678,7 +1678,7 @@ body::after {
   }
 }
 
-@media (max-width: 35em) {
+@media (max-width: 560px) {
   .main__btn {
     -ms-grid-column: unset;
         grid-column-start: unset;

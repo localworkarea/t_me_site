@@ -118,7 +118,7 @@
       grid-column-start: 1;
       grid-column-end: 4;
     }
-    @media (max-width: em(560)){
+    @media (max-width: 560px){
         grid-column-start: unset;
         grid-column-end: unset;
     }
@@ -241,7 +241,7 @@
   @media (max-width: em(930)){
       grid-template-columns: auto auto auto;
   }
-  @media (max-width: em(560)){
+  @media (max-width: 560px){
     grid-template-columns: auto auto;
     justify-items: center;
   }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"t:me Home Page"
+	})
+	<body>
+		<div class="wrapper page-home">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="main">
+					<div class="main__bg">
+						<img src="@img/background/1.jpg" alt="background">
+					</div>
+					<div class="main__container">
+						<div class="main__cube-wrap">
+							<video  muted autoplay loop class="main__cube">
+								<source class="main__cube-src" src="@img/home/cube.mp4" type="video/mp4">
+							</video>
+						</div>
+						<div class="main__top">
+							<h1 class="main__title title-main">
+								<span class="title-main__anim">
+									<span class="title-main__txt">t:me - це 
+										<span class="txt-tt-i-medium">перша</span>
+									</span>
+								</span>
+								<span class="title-main__anim">
+									<span class="title-main__txt">
+										<span class="txt-tt-i-medium">telegram</span> 
+										<span class="title-main__txt_it">агенція</span></span>
+								</span>
+							</h1>
+							<div class="main__promo promo-main">
+								<p class="promo-main__sub-title txt-salma-pro">Просуваємо бренди у найдинамічнішому месенджері на ринку</p>
+								<div class="promo-main__btns">
+									<a href="#" class="promo-main__btn btn">Написати нам</a>
+									<a href="#" class="promo-main__btn btn">Розмістити рекламу</a>
+								</div>
+							</div>
+						</div>
+						<div class="main__count count-main">
+							<div class="count-main__item">
+								<p class="count-main__num txt-tt-i-reg">50</p>
+								<p class="count-main__txt txt-salma-pro">Власних телеграм каналів</p>
+							</div>
+							<div class="count-main__item">
+								<p class="count-main__num txt-tt-i-reg">4</p>
+								<div class="count-main__wrap">
+									<p class="count-main__txt txt-salma-pro">Загальна кількість підписників</p>
+									<p class="count-main__txt-sec txt-tt-i-reg">млн</p>
+								</div>
+							</div>
+							<div class="count-main__item">
+								<p class="count-main__num txt-tt-i-reg">1</p>
+								<div class="count-main__wrap">
+									<p class="count-main__txt txt-salma-pro">Добове охоплення</p>
+									<p class="count-main__txt-sec txt-tt-i-reg">млн</p>
+								</div>
+							</div>
+							<a href="#" class="main__btn">
+								<img class="main__btn-img-1" src="@img/home/serv.svg" alt="img">
+								<img class="main__btn-img-2" src="@img/icons/arrow-2.svg" alt="img">
+							</a>
+						</div>
+					</div>
+				</section>
+				<section>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

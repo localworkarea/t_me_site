@@ -1,0 +1,79 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.wrapper {
+  &::before {
+    content: '';
+    background-image: url("img/LoopableNoise.gif");
+    background-size: rem(90);
+    background-repeat: repeat;
+    background-position: top;
+    opacity: 0.2;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    pointer-events: none;
+  }
+}
+
+.txt-salma-pro {
+  font-family: 'Salma Pro', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+.txt-tt-i-bold {
+  font-family: "TT Ramillas Trial Bold Italic";
+  font-style: italic;
+  font-weight: 700;
+}
+.txt-tt-i-medium {
+  font-family: "TT Ramillas Trial Medium Italic";
+  font-style: italic;
+  font-weight: 500;
+}
+.txt-tt-i-reg {
+  font-family: "TT Ramillas Trial Italic";
+  font-style: italic;
+  font-weight: 400;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: rem(16) rem(32);
+  background-color: $blue;
+  color: white;
+  border-radius: rem(16);
+
+  font-family: 'Salma Pro', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: rem(16);
+  line-height: calc(24/16);
+
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover){
+    &:hover{
+      background-color: $blue-light;
+    }
+  }
+}
+
+// text slideup animation ==================
+// transition: opacity .6s,transform .45s cubic-bezier(.4,0,.2,1)
+
+// main title animation ====================
+// animation: text-slideup 1s cubic-bezier(.4,0,.2,1) forwards;
+// animation-delay: .13s;
+// animation-delay: .26s;
+// animation-delay: .39s;
+// transform: translateY(100%);
+// 0% {
+//   transform: translateY(100%);
+//   opacity: 0;
+// }
+// 100% {
+//   transform: translate(0);
+//   opacity: 1;

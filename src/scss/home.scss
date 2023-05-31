@@ -62,6 +62,13 @@
     top: 50%;
     transform: translateY(-55%);
     z-index: -1;
+
+    opacity: 0;
+    .loaded & {
+      opacity: 1;
+      transition: opacity 1.5s ease 0.5s;
+    }
+
     @media (max-width: $laptop){
         transform: translateY(-64%);
         left: 11%;
@@ -113,6 +120,13 @@
     align-items: center;
     justify-content: center;
 
+    opacity: 0;
+
+    .loaded & {
+      opacity: 1;
+      transition: opacity 1s ease 5s;
+    }
+
     @media (max-width:930px){
       justify-self:  center;
       grid-column-start: 1;
@@ -129,6 +143,17 @@
     @include adaptiveValue("width", 84, 56, 3, 768, 360);
     @include adaptiveValue("height", 168, 84, 0, 1440, 768);
     @include adaptiveValue("height", 84, 56, 3, 768, 360);
+
+    animation: circle-anim 5s linear 0s infinite forwards normal;
+
+    @keyframes circle-anim {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(180deg);
+      }
+    }
   }
   // .main__btn-img-2
   &__btn-img-2 {
@@ -139,6 +164,17 @@
     width: auto;
     @include adaptiveValue("height", 55, 28, 0, 1440, 768);
     @include adaptiveValue("height", 28, 18, 3, 768, 360);
+
+    animation: arrow-down 1s ease-in-out 0s infinite alternate forwards;
+
+    @keyframes arrow-down {
+      0% {
+        transform: translate(-50%, -60%);
+      }
+      100% {
+        transform: translate(-50%, -25%);
+      }
+    }
   }
 }
 // -- title main -------------------------------
@@ -157,6 +193,7 @@
   // .title-main__anim
   &__anim {
     display: flex;
+    overflow: hidden;
     &:nth-child(2) {
       align-self: flex-end;
       @media (max-width:1600px){
@@ -178,6 +215,20 @@
     @include adaptiveValue("font-size", 72, 56, 3, 1440, 1024);
     @include adaptiveValue("font-size", 56, 40, 3, 768, 360);
     line-height: calc(160/140);
+
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1s cubic-bezier(.4,0,.2,1);
+    &.anim-title-01 {
+      transition-delay: 1.13s;
+    }
+    &.anim-title-02 {
+      transition-delay: 1.26s;
+    }
+    .loaded & {
+      transform: translateY(0);
+      opacity: 1;
+    }
     
     // .title-main__txt_it
     &_it {
@@ -195,6 +246,12 @@
 
 // -- promo-main -------------------------------
 .promo-main {
+  @extend %animate;
+  transition-delay: 3.5s;
+  .loaded & {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
   // .promo-main__sub-title
   &__sub-title {
     font-size: 20px;
@@ -247,6 +304,14 @@
   }
   // .count-main__item
   &__item {
+    @extend %animate;
+    transition-delay: 3.63s;
+    .loaded & {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+
     display: flex;
     @include adaptiveValue("column-gap", 32, 12, 0, 1440, 768);
     &:nth-child(1) {

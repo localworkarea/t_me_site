@@ -61,6 +61,12 @@
   }
 }
 
+%animate {
+  transition: opacity .6s,transform .45s cubic-bezier(.4,0,.2,1);
+  opacity: 0;
+  transform: translate(0, 30%);
+}
+
 // text slideup animation ==================
 // transition: opacity .6s,transform .45s cubic-bezier(.4,0,.2,1)
 

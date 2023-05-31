@@ -952,6 +952,7 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #000206;
 }
 
 .main__bg {
@@ -1153,12 +1154,6 @@ body::after {
   opacity: 1;
 }
 
-.title-main__txt_it {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 400;
-}
-
 .promo-main {
   -webkit-transition-delay: 3.5s;
        -o-transition-delay: 3.5s;
@@ -1252,6 +1247,50 @@ body::after {
 .count-main__txt-sec {
   color: #008AF5;
   line-height: 1;
+}
+
+.services__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 528px;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+}
+
+.item-services {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-transition: flex-grow 0.5s ease-in-out, -webkit-box-flex 0.5s ease-in-out;
+  transition: flex-grow 0.5s ease-in-out, -webkit-box-flex 0.5s ease-in-out;
+  -o-transition: flex-grow 0.5s ease-in-out;
+  transition: flex-grow 0.5s ease-in-out;
+  transition: flex-grow 0.5s ease-in-out, -webkit-box-flex 0.5s ease-in-out, -ms-flex-positive 0.5s ease-in-out;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.item-services__image {
+  height: 416px;
+  overflow: hidden;
+}
+
+.item-services__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .swiper {
@@ -1385,6 +1424,10 @@ body::after {
   .count-main__txt-sec {
     font-size: 4.375rem;
   }
+
+  .services {
+    padding-top: 7.5rem;
+  }
 }
 
 @media (min-width: 120em) {
@@ -1496,12 +1539,6 @@ body::after {
         -ms-grid-row-align: unset;
         align-self: unset;
     padding-left: 1.5625rem;
-  }
-
-  .title-main__txt_it {
-    font-family: "TT Ramillas Trial Medium Italic";
-    font-style: italic;
-    font-weight: 500;
   }
 }
 
@@ -1881,6 +1918,10 @@ body::after {
 
   .count-main__txt-sec {
     font-size: 2rem;
+  }
+
+  .services {
+    padding-top: 5rem;
   }
 }
 
@@ -2360,6 +2401,18 @@ body::after {
 @supports not (font-size: clamp( 2rem , -0.7142857143rem  +  5.6547619048vw , 4.375rem )) {
     .count-main__txt-sec {
       font-size: calc(2rem + 2.375 * (100vw - 48rem) / 42);
+    }
+}
+
+@supports (padding-top: clamp( 5rem , 2.1428571429rem  +  5.9523809524vw , 7.5rem )) {
+    .services {
+      padding-top: clamp( 5rem , 2.1428571429rem  +  5.9523809524vw , 7.5rem );
+    }
+}
+
+@supports not (padding-top: clamp( 5rem , 2.1428571429rem  +  5.9523809524vw , 7.5rem )) {
+    .services {
+      padding-top: calc(5rem + 2.5 * (100vw - 48rem) / 42);
     }
 }
 }
@@ -3016,6 +3069,18 @@ body::after {
 
   .nav-footer__link:hover {
     color: #bdbdbd;
+  }
+
+  .item-services:hover {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+
+  .item-services:hover .item-services__image img {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
 }
 

@@ -1,5 +1,8 @@
 .swiper {
 	overflow: hidden;
+	&.slider-promo__slider {
+		overflow: visible;
+	}
 }
 .swiper-initialized {
 	touch-action: pan-y;

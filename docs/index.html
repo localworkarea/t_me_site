@@ -11,7 +11,7 @@
 			background-color: #01050d;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20230531125858">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230601230715">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,7 @@
 
 				<div class="header__menu menu">
 					<div class="menu__bg">
-						<img src="img/background/1.jpg" alt="background">
+						<picture><source srcset="img/background/1.webp" type="image/webp"><img src="img/background/1.jpg" alt="background"></picture>
 					</div>
 					<div class="menu__container">
 						<div class="menu__wrapper">
@@ -62,7 +62,7 @@
 									<div class="menu__slide slide-menu swiper-slide">
 										<div class="slide-menu__body">
 											<div class="slide-menu__img-ibg">
-												<img src="img/menu/1.png" alt="uklon">
+												<picture><source srcset="img/menu/1.webp" type="image/webp"><img src="img/menu/1.png" alt="uklon"></picture>
 											</div>
 											<div class="slide-menu__title">Uklon</div>
 										</div>
@@ -70,7 +70,7 @@
 									<div class="menu__slide slide-menu swiper-slide">
 										<div class="slide-menu__body">
 											<div class="slide-menu__img-ibg">
-												<img src="img/menu/1.png" alt="uklon">
+												<picture><source srcset="img/menu/1.webp" type="image/webp"><img src="img/menu/1.png" alt="uklon"></picture>
 											</div>
 											<div class="slide-menu__title">Uklon</div>
 										</div>
@@ -78,7 +78,7 @@
 									<div class="menu__slide slide-menu swiper-slide">
 										<div class="slide-menu__body">
 											<div class="slide-menu__img-ibg">
-												<img src="img/menu/1.png" alt="uklon">
+												<picture><source srcset="img/menu/1.webp" type="image/webp"><img src="img/menu/1.png" alt="uklon"></picture>
 											</div>
 											<div class="slide-menu__title">Uklon</div>
 										</div>
@@ -86,7 +86,7 @@
 									<div class="menu__slide slide-menu swiper-slide">
 										<div class="slide-menu__body">
 											<div class="slide-menu__img-ibg">
-												<img src="img/menu/1.png" alt="uklon">
+												<picture><source srcset="img/menu/1.webp" type="image/webp"><img src="img/menu/1.png" alt="uklon"></picture>
 											</div>
 											<div class="slide-menu__title">Uklon</div>
 										</div>
@@ -94,10 +94,10 @@
 								</div>
 								<div class="menu__slider-btn">
 									<button type="button" class="menu__btn-slider swiper-button-prev">
-										<img src="img/icons/arrow-slider.png" alt="arrow">
+										<picture><source srcset="img/icons/arrow-slider.webp" type="image/webp"><img src="img/icons/arrow-slider.png" alt="arrow"></picture>
 									</button>
 									<button type="button" class="menu__btn-slider swiper-button-next">
-										<img src="img/icons/arrow-slider.png" alt="arrow">
+										<picture><source srcset="img/icons/arrow-slider.webp" type="image/webp"><img src="img/icons/arrow-slider.png" alt="arrow"></picture>
 									</button>
 								</div>
 							</div>
@@ -108,8 +108,8 @@
 		</header>
 		<main class="page">
 			<section class="main">
-				<div class="main__bg">
-					<img src="img/background/main.png" alt="background">
+				<div class="main__bg bg-black__bg">
+					<picture><source srcset="img/background/main.webp" type="image/webp"><img src="img/background/main.png" alt="background"></picture>
 				</div>
 				<div class="main__container">
 					<div class="main__cube-wrap">
@@ -158,48 +158,187 @@
 								<p class="count-main__txt-sec txt-tt-i-reg">млн</p>
 							</div>
 						</div>
-						<a href="#" class="main__btn">
+						<a href="#" data-goto=".services" class="main__btn">
 							<img class="main__btn-img-1" src="img/home/serv.svg" alt="img">
 							<img class="main__btn-img-2" src="img/icons/arrow-2.svg" alt="img">
 						</a>
 					</div>
 				</div>
 			</section>
-
 			<section class="services">
-				<!-- <div class="services__container">
-						<div class="services__wrapper">
-							<article class="services__item item-services">
-								<div class="item-services__image">
-									<img src="img/services/campaign.jpg" alt="img">
-								</div>
-								<p class="item-services__txt">Промокампанії в Telegram</p>
-							</article>
-							<article class="services__item item-services">
-								<div class="item-services__image">
-									<img src="img/services/content.jpg" alt="img">
-								</div>
-								<p class="item-services__txt">Контент-маркетинг</p>
-							</article>
-							<article class="services__item item-services">
-								<div class="item-services__image">
-									<img src="img/services/chanel.jpg" alt="img">
-								</div>
-								<p class="item-services__txt">Telegram-канал під ключ</p>
-							</article>
-							<article class="services__item item-services">
-								<div class="item-services__image">
-									<img src="img/services/promo.jpg" alt="img">
-								</div>
-								<p class="item-services__txt">Просування в Telegram</p>
-							</article>
+				<div class="services__container">
+					<div data-watch-threshold="0.5" data-watch data-watch-once class="services__wrapper">
+						<article class="services__item item-services">
+							<div class="item-services__image">
+								<picture><source srcset="img/services/campaign.webp" type="image/webp"><img src="img/services/campaign.jpg" alt="img"></picture>
+							</div>
+							<p class="item-services__txt">Промокампанії в Telegram</p>
+						</article>
+						<article class="services__item item-services">
+							<div class="item-services__image">
+								<picture><source srcset="img/services/content.webp" type="image/webp"><img src="img/services/content.jpg" alt="img"></picture>
+							</div>
+							<p class="item-services__txt">Контент-маркетинг</p>
+						</article>
+						<article class="services__item item-services">
+							<div class="item-services__image">
+								<picture><source srcset="img/services/chanel.webp" type="image/webp"><img src="img/services/chanel.jpg" alt="img"></picture>
+							</div>
+							<p class="item-services__txt">Telegram-канал під ключ</p>
+						</article>
+						<article class="services__item item-services">
+							<div class="item-services__image">
+								<picture><source srcset="img/services/promo.webp" type="image/webp"><img src="img/services/promo.jpg" alt="img"></picture>
+							</div>
+							<p class="item-services__txt">Просування в Telegram</p>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="brands">
+				<div class="brands__container">
+					<div class="brands__wrapper">
+						<div class="brands__title">
+							<h2 class="brands__title-anim title-anim__title txt-tt-i-reg">
+								<span class="title-anim__txt-black">Великі <span class="txt-tt-i-bold">бренди</span> люблять нас</span>
+							</h2>
 						</div>
-					</div>		 -->
+						<div data-watch-threshold="0.3" data-watch class="brands__items items-brands">
+							<div class="items-brands__item">
+								<div class="items-brands__img">
+									<img src="img/home/brands/allo.svg" alt="brand">
+								</div>
+							</div>
+							<div class="items-brands__item">
+								<div class="items-brands__img">
+									<img src="img/home/brands/kyivstar.svg" alt="brand">
+								</div>
+							</div>
+							<div class="items-brands__item">
+								<div class="items-brands__img">
+									<img src="img/home/brands/cytrus.svg" alt="brand">
+								</div>
+							</div>
+							<div class="items-brands__item">
+								<div class="items-brands__img">
+									<img src="img/home/brands/eva.svg" alt="brand">
+								</div>
+							</div>
+							<div class="items-brands__item">
+								<div class="items-brands__img">
+									<img src="img/home/brands/epicentr.svg" alt="brand">
+								</div>
+							</div>
+							<div class="items-brands__item">
+								<div class="items-brands__img">
+									<img src="img/home/brands/sweettv.svg" alt="brand">
+								</div>
+							</div>
+							<div class="items-brands__item">
+								<div class="items-brands__img">
+									<img src="img/home/brands/samsung.svg" alt="brand">
+								</div>
+							</div>
+							<div class="items-brands__item">
+								<div class="items-brands__img">
+									<img src="img/home/brands/syshia.svg" alt="brand">
+								</div>
+							</div>
+							<div class="items-brands__item">
+								<div class="items-brands__img">
+									<img src="img/home/brands/rocket.svg" alt="brand">
+								</div>
+							</div>
+							<div class="items-brands__item">
+								<div class="items-brands__img">
+									<img src="img/home/brands/realme.svg" alt="brand">
+								</div>
+							</div>
+							<div class="items-brands__item items-brands__item_txt">
+								<div class="items-brands__txt txt-salma-pro">
+									Наше агентство допоможе розвинути Телеграм-канал вашого бренду, закупити рекламу та зібрати цільову аудиторію.
+								</div>
+							</div>
+							<div class="items-brands__item items-brands__item_btn">
+								<a href="#" class="items-brands__btn btn">Розмістити рекламу</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="promo">
+				<div class="promo__bg bg-black__bg">
+					<picture><source srcset="img/background/1.webp" type="image/webp"><img src="img/background/1.jpg" alt="background"></picture>
+				</div>
+				<div class="promo__container">
+					<h2 class="promo__title title-anim__title txt-tt-i-reg">
+						<span class="title-anim__txt-white">Для просування в <span class="txt-tt-i-bold">Telegram</span> потрібна:</span>
+					</h2>
+					<div data-watch-threshold="0.3" data-watch data-watch-once class="promo__slider slider-promo">
+						<div class="slider-promo__slider swiper">
+							<div class="slider-promo__wrapper swiper-wrapper">
+								<article class="slider-promo__slide swiper-slide">
+									<div class="slider-promo__body">
+										<div class="slider-promo__info">
+											<h3 class="slider-promo__title txt-salma-pro">Аналітика</h3>
+											<p class="slider-promo__txt txt-salma-pro">Необхідно постійно досліджувати цільову аудиторію, її інтереси та активності конкурентів</p>
+										</div>
+										<div class="slider-promo__img">
+											<picture><source srcset="img/home/promotion/Analytics.webp" type="image/webp"><img src="img/home/promotion/Analytics.png" alt="img"></picture>
+										</div>
+									</div>
+								</article>
+								<article class="slider-promo__slide swiper-slide">
+									<div class="slider-promo__body">
+										<div class="slider-promo__info">
+											<h3 class="slider-promo__title txt-salma-pro">Медіамережа</h3>
+											<p class="slider-promo__txt txt-salma-pro">Релевантні рекламні канали та надійні партнери</p>
+										</div>
+										<div class="slider-promo__img">
+											<picture><source srcset="img/home/promotion/Media.webp" type="image/webp"><img src="img/home/promotion/Media.png" alt="img"></picture>
+										</div>
+									</div>
+								</article>
+								<article class="slider-promo__slide swiper-slide">
+									<div class="slider-promo__body">
+										<div class="slider-promo__info">
+											<h3 class="slider-promo__title txt-salma-pro">Стратегія</h3>
+											<p class="slider-promo__txt txt-salma-pro">Щоб створити канал з нуля або покращити наповнення існуючого</p>
+										</div>
+										<div class="slider-promo__img">
+											<picture><source srcset="img/home/promotion/Strategy.webp" type="image/webp"><img src="img/home/promotion/Strategy.png" alt="img"></picture>
+										</div>
+									</div>
+								</article>
+								<article class="slider-promo__slide swiper-slide">
+									<div class="slider-promo__body">
+										<div class="slider-promo__info">
+											<h3 class="slider-promo__title txt-salma-pro">Контент-план</h3>
+											<p class="slider-promo__txt txt-salma-pro">Пророблені рекламні креативи та тексти</p>
+										</div>
+										<div class="slider-promo__img">
+											<picture><source srcset="img/home/promotion/Content-plan.webp" type="image/webp"><img src="img/home/promotion/Content-plan.png" alt="img"></picture>
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="swiper-pagination"></div>
+							<div class="slider-promo__buttons">
+								<button type="button" class="slider-promo__btn swiper-button-prev">
+									<picture><source srcset="img/icons/arrow.webp" type="image/webp"><img src="img/icons/arrow.png" alt="arrow"></picture>
+								</button>
+								<button type="button" class="slider-promo__btn swiper-button-next">
+									<picture><source srcset="img/icons/arrow.webp" type="image/webp"><img src="img/icons/arrow.png" alt="arrow"></picture>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__bg">
-				<img src="img/background/1.jpg" alt="background">
+				<picture><source srcset="img/background/1.webp" type="image/webp"><img src="img/background/1.jpg" alt="background"></picture>
 			</div>
 			<div class="footer-top">
 				<div class="footer-top__container">
@@ -250,7 +389,11 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20230531125858"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js?_v=20230601230715"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js?_v=20230601230715"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js?_v=20230601230715"></script>
+
+	<script src="js/app.min.js?_v=20230601230715"></script>
 </body>
 
 </html>

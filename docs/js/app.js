@@ -4100,7 +4100,8 @@
             scrub: 1
         },
         duration: 1,
-        backgroundSize: "150% 100%"
+        backgroundSize: "150% 100%",
+        ease: "none"
     });
     gsap.to(".title-anim__txt-white", {
         scrollTrigger: {
@@ -4109,8 +4110,38 @@
             scrub: 1
         },
         duration: 1,
-        backgroundSize: "150% 100%"
+        backgroundSize: "150% 100%",
+        ease: "none"
     });
+    const container = document.querySelector(".slider-benefits");
+    const sections = gsap.utils.toArray(".slider-benefits__slide");
+    let maxWidth = gsap.matchMedia();
+    maxWidth.add("(min-width: 769px)", (() => {
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: container,
+                pin: true,
+                scrub: 2,
+                start: "top top",
+                end: "bottom"
+            }
+        });
+    }));
+    maxWidth.add("(max-width: 768px)", (() => {
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".benefits",
+                pin: true,
+                scrub: 2,
+                start: "top top",
+                end: "bottom"
+            }
+        });
+    }));
     window["FLS"] = true;
     isWebp();
     addTouchClass();

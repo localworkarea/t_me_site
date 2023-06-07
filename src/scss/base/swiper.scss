@@ -3,6 +3,9 @@
 	&.slider-promo__slider {
 		overflow: visible;
 	}
+	&.team__slider {
+		overflow: visible;
+	}
 }
 .swiper-initialized {
 	touch-action: pan-y;

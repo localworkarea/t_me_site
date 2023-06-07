@@ -41,12 +41,13 @@ gsap.to(".title-anim__txt-white", {
   ease:"none",
 });
 
+
 // GSAP Slider Benefits ===================
 const container = document.querySelector(".slider-benefits");
 const sections = gsap.utils.toArray(".slider-benefits__slide");
-let maxWidth = gsap.matchMedia();
+let matchMedia = gsap.matchMedia();
 
-maxWidth.add('(min-width: 769px)', () => {
+matchMedia.add('(min-width: 769px)', () => {
   gsap.to(sections, {
     xPercent: -100 * (sections.length - 1),
     ease: "none",
@@ -61,7 +62,7 @@ maxWidth.add('(min-width: 769px)', () => {
   });
 });
 
-maxWidth.add('(max-width: 768px)', () => {
+matchMedia.add('(max-width: 768px)', () => {
   gsap.to(sections, {
     xPercent: -100 * (sections.length - 1),
     ease: "none",
@@ -75,3 +76,147 @@ maxWidth.add('(max-width: 768px)', () => {
     }
   });
 });
+
+// -----------------------------------
+gsap.to(".needs__title-txt", {
+  scrollTrigger: {
+    trigger: ".needs__title-title",
+    // markers: true,
+    start: "bottom bottom",
+    end: "bottom center",
+    scrub: 1,
+  },
+  duration: 1,
+  backgroundSize: "150% 100%",
+  ease:"none",
+});
+
+gsap.to(".cases__txt-anim", {
+  scrollTrigger: {
+    trigger: ".cases__title-anim",
+    // markers: true,
+    start: "bottom bottom",
+    end: "bottom center",
+    scrub: 1,
+  },
+  duration: 1,
+  backgroundSize: "150% 100%",
+  ease:"none",
+});
+
+gsap.to(".clients__title-txt", {
+  scrollTrigger: {
+    trigger: ".clients__title-anim",
+    // markers: true,
+    start: "top bottom",
+    end: "top center",
+    scrub: 1,
+  },
+  duration: 1,
+  backgroundSize: "100% 100%",
+  ease:"none",
+});
+
+// GSAP Slider Clients ===================
+const containerClients = document.querySelector(".clients");
+const sectionsClients = gsap.utils.toArray(".item-feedback");
+
+gsap.to(sectionsClients, {
+  yPercent: -100 * (sectionsClients.length - 1),
+  ease: "linear.easeNone",
+  scrollTrigger: {
+    trigger: containerClients,
+    pin: true,
+    scrub: 1,
+    start: "top top",
+    // end: "+=400  bottom",
+    // markers: true,
+  }
+});
+  
+// .team__txt-anim ---------------------------
+gsap.to(".team__txt-anim", {
+  scrollTrigger: {
+    trigger: ".team__title-anim",
+    // markers: true,
+    start: "top bottom",
+    end: "top center",
+    scrub: 1,
+  },
+  duration: 1,
+  backgroundSize: "100% 100%",
+  ease:"none",
+});
+
+gsap.to(".about__title-txt", {
+  scrollTrigger: {
+    trigger: ".about__title-anim",
+    // markers: true,
+    start: "top bottom",
+    end: "top center",
+    scrub: 1,
+  },
+  duration: 1,
+  backgroundSize: "100% 100%",
+  ease:"none",
+});
+
+  // .chanels__title-anim
+  // .chanels__txt-anim
+gsap.to(".chanels__txt-anim", {
+  scrollTrigger: {
+    trigger: ".chanels__title-anim",
+    // markers: true,
+    start: "top bottom",
+    end: "top center",
+    scrub: 1,
+  },
+  duration: 1,
+  backgroundSize: "100% 100%",
+  ease:"none",
+});
+
+// == Cusrom cursor ===========================================
+const cursor = document.querySelector(".cursor-cases");
+if (cursor) {
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.cssText = "left:"+e.clientX+"px; top:"+e.clientY+"px;";
+  });
+}
+
+const itemCases = document.querySelectorAll('.item-cases__image');
+if (itemCases) {
+  itemCases.forEach(item => {
+    const cursor = document.querySelector(".cursor-cases");
+    item.addEventListener("mouseenter", function() {
+      cursor.classList.add('_active-cursor');
+
+    });
+    item.addEventListener("mouseleave", function() {
+      cursor.classList.remove('_active-cursor');
+    });
+  });
+}
+
+// -- Cursor Team ---------------------------------------------
+const cursorTeam = document.querySelector('.team-cursor');
+const sliderTeam = document.querySelector('.team__slider');
+
+
+sliderTeam.addEventListener("mouseenter", moveTeamCursor);
+sliderTeam.addEventListener("mouseleave", leaveTeamCursor);
+
+function moveTeamCursor() {
+  sliderTeam.addEventListener("mousemove", (e) => {
+    cursorTeam.style.cssText = "left:"+e.clientX+"px; top:"+e.clientY+"px;";
+  });
+  cursorTeam.classList.add('_cursor-enter');
+  cursorTeam.classList.remove('_cursor-leave');
+}
+
+function leaveTeamCursor() {
+    cursorTeam.classList.remove('_cursor-enter');
+    cursorTeam.classList.add('_cursor-leave');
+    cursorTeam.style.cssText = "left:50%; top:50%;";
+}
+

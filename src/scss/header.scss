@@ -40,7 +40,9 @@
 	opacity: 0;
 	pointer-events: none;
 	transition: all 0.45s ease-in-out 0s;
-
+	@media (max-width:$mobileSmall){
+		transition: all 0.3s ease-in-out 0s;
+	}
 	.menu-open & {
 		opacity: 1;
 		pointer-events: all;

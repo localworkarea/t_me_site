@@ -103,6 +103,14 @@
         z-index: 1;
       }
     }
+    &__bg-img-1 {
+
+    }
+    &__bg-img-2 {
+      bottom: 0;
+      left: 0;
+      height: auto !important;
+    }
 }
 
 // Title GSAP animation ===================================================
@@ -134,3 +142,46 @@
     background-size: 0% 100%;
 	}
 }
+
+// Custom cursor =========================================================
+.cursor-cases {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: rem(8);
+  width: rem(175);
+  height: rem(175);
+  border-radius: 50%;
+  background: $blue;
+
+  position: fixed;
+  opacity: 0;
+ 
+  transform: translate(-50%, -50%) scale(0);
+  transition: opacity .3s cubic-bezier(.67, .21, .27, .74), transform .45s cubic-bezier(.67, .21, .27, .74);
+  
+  pointer-events: none;
+  user-select: none;
+  z-index: 10;
+  &._active-cursor {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    @media (max-width: em(1024)){
+      transform: translate(-50%, -50%) scale(0.7);
+    }
+  }
+  .touch & {
+    opacity: 0;
+  }
+	// .cursor-cases__img
+	&__img {
+	}
+	// .cursor-cases__txt
+	&__txt {
+    font-size: rem(24);
+    line-height: calc(32/24);
+    color: $gray-light;
+	}
+}
+

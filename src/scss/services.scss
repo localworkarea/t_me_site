@@ -1,0 +1,648 @@
+//----------------------------------------------------------------------------
+// == 1. MAIN-SERVICES SECTION ====================================================
+//----------------------------------------------------------------------------
+.main-services {
+  position: relative;
+  background-color: $background-black-sec;
+  // .main-services__bg
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      opacity: 0;
+      transition: all 1s cubic-bezier(.4,0,.2,1) 0.7s;
+  
+      .loaded & {
+        opacity: 1;
+      }
+
+      @media (max-width:$mobile){
+         bottom: 0;
+         height: 92%; 
+      }
+      @media (max-width: em(700)){
+          position: absolute;
+          width: auto;
+          height: 65%;
+          right: rem(-145);
+      }
+    }
+  }
+  // .main-services__container
+  &__container {
+    position: relative; 
+    z-index: 1;
+
+    @include adaptiveValue("padding-top", 218, 171, 0, 1920, 1440);
+    @include adaptiveValue("padding-top", 171, 136, 3, 1440, 768);
+    @include adaptiveValue("padding-top", 136, 84, 3, 768, 360);
+
+    @include adaptiveValue("padding-bottom", 124, 171, 0, 1920, 1440);
+    @include adaptiveValue("padding-bottom", 171, 136, 3, 1440, 768);
+    @include adaptiveValue("padding-bottom", 136, 335, 3, 768, 480);
+  }
+  // .main-services__title
+  &__title {
+    color: white;
+    @include adaptiveValue("margin-left", 158, 0, 0, 1920, 1440);
+ 
+    span {
+      display: inline-block;
+    }
+  }
+  // .main-services__title-wrap
+  &__title-wrap {
+    overflow: hidden;
+    @include adaptiveValue("font-size", 56, 40, 3, 768, 360);
+  }
+  // .main-services__title-txt
+  &__title-txt {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1s cubic-bezier(.4,0,.2,1);
+
+    .loaded & {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    // .main-services__title-txt_big
+    &_big {
+      transition-delay: 1.13s;
+      @include adaptiveValue("font-size", 140, 56, 0, 1440, 768);
+      line-height: calc(160/140);
+    }
+    // .main-services__title-txt_small
+    &_small {
+      transition-delay: 1.26s;
+      font-size: 100px;
+      @include adaptiveValue("font-size", 100, 56, 0, 1440, 768);
+      line-height: calc(120/100);
+    }
+  }
+}
+
+//----------------------------------------------------------------------------
+// == 2. NEED-SERVICES SECTION ====================================================
+//----------------------------------------------------------------------------
+.need-service {
+  @include adaptiveValue("padding-top", 120, 80, 0, 1440, 768);
+  @include adaptiveValue("padding-bottom", 240, 200, 0, 1920, 1440);
+  @include adaptiveValue("padding-bottom", 200, 160, 3, 1440, 768);
+  @include adaptiveValue("padding-bottom", 160, 80, 3, 768, 360);
+  // .need-service__container
+  &__container {
+   
+  }
+	// .need-service__body
+	&__body {
+    display: grid;
+    grid-template-columns: 1fr 48.7%;
+    column-gap: rem(40);
+    position: relative;
+    @media (max-width: em(992)){
+        grid-template-columns: auto 66%;
+    }
+    @media (max-width:$mobileSmall){
+       grid-template-columns: auto; 
+    }
+	}
+  // .need-service__wrap
+  &__wrap {
+    @media (max-width:$mobileSmall){
+       position: absolute;
+       top: 0;
+       right: 0; 
+       height: 100%;
+    }
+  }
+  // .need-service__title-anim
+  &__title-anim {
+    position: relative;
+    @include adaptiveValue("margin-bottom", 72, 48, 0, 1920, 1440);
+    @include adaptiveValue("margin-bottom", 48, 52, 3, 1440, 768);
+    @include adaptiveValue("margin-bottom", 52, 40, 3, 768, 360);
+
+    opacity: 0;
+    transition: opacity 0.3s ease 0s;
+    ._watcher-view & {
+      opacity: 1;
+    }
+    @media (max-width: em(992)){
+        text-align: center;
+    }
+  }
+  // .need-service__txt-anim
+  &__txt-anim {
+  }
+  // .need-service__gif
+  &__gif {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    &._watcher-view {
+      img {
+        opacity: 1;
+    
+        &:nth-child(1) {
+          transition-delay: 0.0s;
+        }
+        &:nth-child(2) {
+          transition-delay: 0.1s;
+        }
+        &:nth-child(3) {
+          transition-delay: 0.2s;
+        }
+        &:nth-child(4) {
+          transition-delay: 0.3s;
+        }
+        &:nth-child(5) {
+          transition-delay: 0.4s;
+        }
+      }
+    }
+
+    @media (max-width: em(992)){
+        height: 100%;
+    }
+    @media (max-width:$mobileSmall){
+       top: -7%; 
+    }
+    @media (max-width:$mobileXS){
+       top: -10%; 
+    }
+    img {
+      opacity: 0;
+      transition: opacity 0.65s ease;
+
+      width: 19vw;
+      max-width: rem(358);
+      height: auto;
+      position: relative;
+      @media (max-width:$mobileSmall){
+         width: 32vw; 
+      }
+      @media (max-width:$mobileXS){
+         width: 40vw; 
+      }
+      &:nth-child(1) {
+        transform: rotate(-30deg);
+        left: 9%;
+        top: rem(42);
+        @media (max-width:$mobileSmall){
+           left: unset;
+           right: 16%; 
+        }
+        @media (max-width:$mobileXS){
+           top: rem(55); 
+          //  width: 40vw;
+           right: 5%;
+        }
+      }
+      &:nth-child(2) {
+        align-self: flex-end;
+      }
+      &:nth-child(3) {
+        left: 5%;
+        @media (max-width:$mobileSmall){
+           left: 0; 
+        }
+      }
+    }
+  }
+  // .need-service__list
+  &__list {
+  }
+}
+
+.list-need-service {
+  display: flex;
+  flex-direction: column;
+  @include adaptiveValue("row-gap", 120, 80, 0, 1440, 768);
+
+  position: relative;
+  z-index: 1;
+
+  &._watcher-view {
+    .list-need-service__item {
+      opacity: 1;
+      transform: translateY(0);
+  
+      &:nth-child(1) {
+        transition-delay: 0.0s;
+      }
+      &:nth-child(2) {
+        transition-delay: 0.1s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.2s;
+      }
+      &:nth-child(4) {
+        transition-delay: 0.3s;
+      }
+      &:nth-child(5) {
+        transition-delay: 0.4s;
+      }
+    }
+  }
+  // .list-need-service__item
+  &__item {
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all 0.6s ease;
+  }
+  // .list-need-service__number
+  &__number {
+    color: $blue;
+    @include adaptiveValue("font-size", 140, 72, 0, 1440, 768);
+    line-height: calc(160/140);
+    @include adaptiveValue("margin-bottom", 24, 16, 0, 1440, 768);
+  }
+  // .list-need-service__txt
+  &__txt {
+    @include adaptiveValue("font-size", 48, 32, 0, 1920, 1440);
+    @include adaptiveValue("font-size", 32, 24, 3, 1440, 768);
+    line-height: calc(56/48);
+    // .list-need-service__txt_accent
+    &_accent {
+      text-decoration: underline;
+      color: $blue;
+    }
+  }
+}
+
+//----------------------------------------------------------------------------
+// == 3. WHY-SERVICES SECTION ====================================================
+//----------------------------------------------------------------------------
+.why-service {
+  position: relative;
+  @include adaptiveValue("padding-top", 120, 80, 0, 1920, 1440);
+  @include adaptiveValue("padding-top", 80, 40, 3, 768, 360);
+  @include adaptiveValue("padding-bottom", 120, 80, 0, 1920, 1440);
+  @include adaptiveValue("padding-bottom", 80, 40, 3, 768, 360);
+  // .why-service__bg
+  &__bg {
+  }
+  // .why-service__container
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+  // .why-service__title-anim
+  &__title-anim {
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 72, 60, 0, 1920, 1440);
+    @include adaptiveValue("margin-bottom", 60, 48, 3, 1440, 768);
+    @include adaptiveValue("margin-bottom", 48, 40, 3, 768, 360);
+  }
+  // .why-service__txt-anim
+  &__txt-anim {
+  }
+  // .why-service__body
+  &__body {
+    width: 66%;
+    margin: 0 auto;
+    @media (max-width: em(1366)){
+        width: 100%;
+    }
+  }
+  // .why-service__list
+  &__list {
+  }
+  // .why-service__description
+  &__description {
+    @extend %animate;
+    text-align: center;
+    color: $gray-light;
+    @include adaptiveValue("font-size", 32, 24, 0, 1920, 1440);
+    @include adaptiveValue("font-size", 24, 14, 3, 768, 360);
+    line-height: calc(40/32);
+    @media (max-width:em(1440)){
+       line-height: calc(40/24); 
+    }
+  }
+}
+
+.list-why-service {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: rem(40);
+  @include adaptiveValue("row-gap", 72, 48, 0, 1920, 1440);
+  @include adaptiveValue("row-gap", 48, 72, 3, 1440, 768);
+  @include adaptiveValue("row-gap", 72, 40, 3, 768, 360);
+
+  &:not(:last-child) {
+    @include adaptiveValue("margin-bottom", 109, 48, 0, 1920, 1440);
+    @include adaptiveValue("margin-bottom", 48, 72, 3, 1440, 768);
+    @include adaptiveValue("margin-bottom", 72, 48, 3, 768, 360);
+  }
+
+  &._watcher-view {
+    .list-why-service__item {
+      opacity: 1;
+      transform: translateY(0);
+  
+      &:nth-child(1) {
+        transition-delay: 0.0s;
+      }
+      &:nth-child(2) {
+        transition-delay: 0.1s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.2s;
+      }
+      &:nth-child(4) {
+        transition-delay: 0.3s;
+      }
+      &:nth-child(5) {
+        transition-delay: 0.4s;
+      }
+      &:nth-child(6) {
+        transition-delay: 0.5s;
+      }
+    }
+  }
+
+  @media (max-width:$mobileSmall){
+     grid-template-columns: auto; 
+  }
+  // .list-why-service__item
+  &__item {
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all 0.6s ease;
+  }
+  // .list-why-service__number
+  &__number {
+    @include adaptiveValue("font-size", 72, 40, 0, 1920, 1440);
+    line-height: calc(80/72);
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    opacity: 0.6;
+    @include adaptiveValue("margin-bottom", 24, 16, 0, 1920, 1440);
+    @include adaptiveValue("margin-bottom", 16, 12, 3, 768, 360);
+  }
+  // .list-why-service__txt
+  &__txt {
+    color: $gray-light;
+    @include adaptiveValue("font-size", 32, 24, 0, 1920, 1440);
+    @include adaptiveValue("font-size", 24, 14, 3, 768, 360);
+    line-height: calc(40/32);
+  }
+}
+
+//----------------------------------------------------------------------------
+// == 4. PACKAGE-SERVICES SECTION ====================================================
+//----------------------------------------------------------------------------
+.package-service {
+  @include adaptiveValue("padding-top", 240, 200, 0, 1920, 1440);
+  @include adaptiveValue("padding-top", 200, 160, 3, 1440, 768);
+  @include adaptiveValue("padding-top", 160, 80, 3, 768, 360);
+  @include adaptiveValue("padding-bottom", 240, 200, 0, 1920, 1440);
+  @include adaptiveValue("padding-bottom", 200, 160, 3, 1440, 768);
+  @include adaptiveValue("padding-bottom", 160, 80, 3, 768, 360);
+  // .package-service__container
+  &__container {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: rem(40);
+    @include adaptiveValue("row-gap", 64, 80, 0, 1920, 1440);
+    @include adaptiveValue("row-gap", 80, 48, 3, 1440, 768);
+    @include adaptiveValue("row-gap", 48, 40, 3, 768, 360);
+
+    &._watcher-view {
+      .package-service__txt {
+        opacity: 1;
+        transform: translateY(0);
+        &:nth-child(1) {
+          transition-delay: 0.0s;
+          &::before {
+            width: 100%;
+            transition-delay: 0.0s;
+          }
+        }
+        &:nth-child(2) {
+          transition-delay: 0.15s;
+          &::before {
+            width: 100%;
+            transition-delay: 0.15s;
+          }
+        }
+        &:nth-child(3) {
+          transition-delay: 0.3s;
+          &::before {
+            width: 100%;
+            transition-delay: 0.3s;
+          }
+        }
+        &:nth-child(4) {
+          transition-delay: 0.45s;
+          &::before {
+            width: 100%;
+            transition-delay: 0.45s;
+          }
+        }
+        &:nth-child(5) {
+          transition-delay: 0.6s;
+          &::before {
+            width: 100%;
+            transition-delay: 0.6s;
+          }
+        }
+        &:nth-child(6) {
+          transition-delay: 0.75s;
+          &::before {
+            width: 100%;
+            transition-delay: 0.75s;
+          }
+        }
+      }
+    }
+
+    @media (max-width:$mobileSmall){
+       grid-template-columns: auto; 
+    }    
+  }
+  // .package-service__title-anim
+  &__title-anim {
+  }
+  // .package-service__txt-anim
+  &__txt-anim {
+  }
+  // .package-service__txt
+  &__txt {
+    position: relative;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.6s ease;
+
+    @include adaptiveValue("font-size", 32, 24, 0, 1920, 1440);
+    @include adaptiveValue("font-size", 24, 14, 3, 768, 360);
+    line-height: calc(40/32);
+    padding-bottom: rem(32);
+
+    &::before {
+      content:'';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: rem(2);
+      background-color: $blue;
+      transition: all 0.6s ease;
+    }
+
+    // .package-service__txt_accent
+    &_accent {
+    }
+  }
+}
+
+//----------------------------------------------------------------------------
+// == 5. STEPS-SERVICES SECTION ====================================================
+//----------------------------------------------------------------------------
+.steps-service {
+  position: relative;
+  @include adaptiveValue("padding-top", 120, 80, 0, 1920, 1440);
+  @include adaptiveValue("padding-top", 80, 40, 3, 768, 360);
+
+  @include adaptiveValue("padding-bottom", 314, 128, 0, 1920, 1440);
+  @include adaptiveValue("padding-bottom", 128, 156, 3, 1440, 768);
+  @include adaptiveValue("padding-bottom", 156, 104, 3, 768, 360);
+  // .steps-service__bg
+  &__bg {
+  }
+  // .steps-service__container
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+  // .steps-service__title-anim
+  &__title-anim {
+    @include adaptiveValue("margin-bottom", 72, 80, 0, 1920, 1440);
+    @include adaptiveValue("margin-bottom", 80, 48, 3, 1440, 768);
+    @include adaptiveValue("margin-bottom", 48, 40, 3, 768, 360);
+    @media (max-width:$mobileSmall){
+       text-align: center; 
+    }
+  }
+  // .steps-service__txt-anim
+  &__txt-anim {
+  }
+  // .steps-service__list
+  &__list {
+  }
+}
+
+.list-steps-service {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @include adaptiveValue("column-gap", 40, 16, 0, 768, 360);
+  @include adaptiveValue("row-gap", 150, 80, 0, 1920, 1440);
+  @include adaptiveValue("row-gap", 80, 40, 3, 768, 360);
+
+  @media (max-width: em(992)){
+      grid-template-columns: 1fr 1fr;
+  }
+
+  &._watcher-view {
+    .list-steps-service__item {
+      opacity: 1;
+      transform: translateX(0);
+      &:nth-child(1) {
+        transition-delay: 0.0s;
+      }
+      &:nth-child(2) {
+        transition-delay: 0.1s;
+      }
+      &:nth-child(3) {
+        transition-delay: 0.2s;
+      }
+      &:nth-child(4) {
+        transition-delay: 0.3s;
+      }
+      &:nth-child(5) {
+        transition-delay: 0.4s;
+      }
+      &:nth-child(6) {
+        transition-delay: 0.5s;
+      }
+    }
+  }
+
+  // .list-steps-service__item
+  &__item {
+    opacity: 0;
+    transform: translateX(20%);
+    transition: all 0.6s ease;
+
+    position: relative;
+    &::before,
+    &::after {
+      content:'';
+      position: absolute;
+      top: rem(45);
+      height: rem(2);
+      width: 113%;
+      background-color: #797C7F;
+      opacity: 0.1;
+      // opacity: 1;
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 100%;
+    }
+
+    &:nth-child(1) {
+      &::after {
+        display: none;
+      }
+    }
+    &:nth-child(2) {
+      &::after {
+        width: 100%;
+      }
+    }
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+    @media (min-width:em(993)){
+        &:nth-child(4) {
+          // left: ;
+        }
+    }
+  }
+  // .list-steps-service__img
+  &__img {
+    height: auto;
+    @include adaptiveValue("width", 100, 56, 0, 768, 360);
+    margin-bottom: rem(32);
+    position: relative;
+    z-index: 1;
+  }
+  // .list-steps-service__txt
+  &__txt {
+    color: $gray-light;
+    @include adaptiveValue("font-size", 32, 24, 0, 1920, 1440);
+    @include adaptiveValue("font-size", 24, 14, 3, 768, 360); 
+    line-height: calc(40/32);
+  }
+}

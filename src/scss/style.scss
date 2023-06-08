@@ -26,6 +26,8 @@ $fontSize: rem(16); // де 14(px) - розмір шрифту за замовч
 $mainColor: #000; // Колір шрифту за замовчуванням
 $black-light: #1D1D1D;
 $background-black: rgba(0, 1, 4, 0.7);
+$background-black-sec: #011220;
+
 $gray-light: #F9F9F9; 
 $blue: #008AF5; 
 $blue-light: #40ABFF; 
@@ -130,3 +132,4 @@ body {
 
 // Підключення стилів окремих сторінок
 @import "home";
+@import "services";

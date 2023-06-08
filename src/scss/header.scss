@@ -1,9 +1,10 @@
 .header {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	@include adaptiveValue("margin-top", 64, 12, 0, 1920, 1440);
+	@include adaptiveValue("margin-top", 88, 32, 0, 1920, 1440);
+	@include adaptiveValue("margin-top", 32, 16, 3, 768, 360);
 	z-index: 50;
 	// .header__container
 	&__container {
@@ -166,12 +167,6 @@
 	}
 	// .menu__item
 	&__item {
-		// &:not(:last-child) {
-		// 	margin-bottom: rem(54);
-		// 	@media (max-width:$laptop){
-		// 		  margin-bottom: rem(72);
-		// 	}
-		// }
 	}
 	// .menu__link
 	&__link {
@@ -284,8 +279,12 @@
 	}
 	// .menu__btn-wrap
 	&__btn-wrap {
-		position: relative;
+		position: fixed;
+		top: 0;
+		left: 0;
 		z-index: 12;
+		width: 100%;
+		@include adaptiveValue("margin-top", 64, 12, 0, 1920, 1440);
 	}
 	// .menu__btn
 	&__btn {
@@ -357,6 +356,11 @@
 			 column-gap: rem(8);
 			 border-radius: rem(4);
 		}
+	// .btn-menu__container
+	&__container {
+		display: flex;
+		justify-content: flex-end;
+	}
 	// .btn-menu__menu
 	&__menu {
 		position: relative;

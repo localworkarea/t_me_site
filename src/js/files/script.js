@@ -320,3 +320,55 @@ if (animTitleGsap) {
   });
 }
 
+const listNeedServiceTxt = document.querySelectorAll('.list-need-service__txt');
+if (listNeedServiceTxt) {
+  listNeedServiceTxt.forEach(item => {
+    const needServiceGif = document.querySelector('.need-service__gif');
+    const gifimg01 = document.querySelector('.gif-img_01');
+    const gifimg02 = document.querySelector('.gif-img_02');
+    const gifimg03 = document.querySelector('.gif-img_03');
+    const gifimg04 = document.querySelector('.gif-img_04');
+    const gifimg05 = document.querySelector('.gif-img_05');
+    const gifimg06 = document.querySelector('.gif-img_06');
+    item.addEventListener("mouseenter", function() {
+      if (item.classList.contains('list-need-serv-01')) {
+        gifimg01.classList.add('_active');
+      }
+      if (item.classList.contains('list-need-serv-02')) {
+        gifimg02.classList.add('_active');
+      }
+      if (item.classList.contains('list-need-serv-03')) {
+        gifimg03.classList.add('_active');
+      }
+      if (item.classList.contains('list-need-serv-04')) {
+        gifimg04.classList.add('_active');
+      }
+      if (item.classList.contains('list-need-serv-05')) {
+        gifimg05.classList.add('_active');
+      }
+      if (item.classList.contains('list-need-serv-06')) {
+        gifimg06.classList.add('_active');
+      }
+    });
+    item.addEventListener("mouseleave", function() {
+      if (item.classList.contains('list-need-serv-01')) {
+        gifimg01.classList.remove('_active');
+      }
+      if (item.classList.contains('list-need-serv-02')) {
+        gifimg02.classList.remove('_active');
+      }
+      if (item.classList.contains('list-need-serv-03')) {
+        gifimg03.classList.remove('_active');
+      }
+      if (item.classList.contains('list-need-serv-04')) {
+        gifimg04.classList.remove('_active');
+      }
+      if (item.classList.contains('list-need-serv-05')) {
+        gifimg05.classList.remove('_active');
+      }
+      if (item.classList.contains('list-need-serv-06')) {
+        gifimg06.classList.remove('_active');
+      }
+    });
+  })
+}

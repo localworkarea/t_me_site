@@ -386,6 +386,7 @@
   }
   // .item-services__image
   &__image {
+    display: block;
     height: 416px;
     @include adaptiveValue("height", 416, 296, 0, 1920, 1440);
     @include adaptiveValue("height", 296, 152, 3, 1440, 769);
@@ -405,6 +406,7 @@
   }
   // .item-services__txt
   &__txt {
+    display: flex;
     @include adaptiveValue("font-size", 32, 16, 0, 1440, 769);
     @include adaptiveValue("font-size", 32, 16, 3, 768, 360);
     line-height: calc(40/32);

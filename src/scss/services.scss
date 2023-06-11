@@ -271,43 +271,9 @@
       position: relative;
       opacity: 0;
       transition: opacity 0.45s ease 0s;
-        // .gif-img_01
-		    &.gif-img_01 {
-      
-          &._active {
-            opacity: 1;
-          }
-		    }
-		    // .gif-img_02
-		    &.gif-img_02 {
-          &._active {
-            opacity: 1;
-          }
-		    }
-		    // .gif-img_03
-		    &.gif-img_03 {
-          &._active {
-            opacity: 1;
-          }
-		    }
-		    // .gif-img_04
-		    &.gif-img_04 {
-          &._active {
-            opacity: 1;
-          }
-		    }
-		    // .gif-img_05
-		    &.gif-img_05 {
-          &._active {
-            opacity: 1;
-          }
-		    }
-		    // .gif-img_06
-		    &.gif-img_06 {
-          &._active {
-            opacity: 1;
-          }
-		    }
+      &._active {
+        opacity: 1;
+      }
     }
 
   }

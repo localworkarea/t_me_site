@@ -476,28 +476,26 @@ body::after {
   line-height: 1.1666666667;
 }
 
-.title-anim__txt-black {
+.title-anim__txt {
   position: relative;
   width: 100%;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0.1);
   -webkit-background-clip: text;
   background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
-  background-image: -o-linear-gradient(#000, #000);
-  background-image: linear-gradient(#000, #000);
   background-size: 0% 100%;
 }
 
+.title-anim__txt-black {
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.1);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
+  background-image: -o-linear-gradient(#000, #000);
+  background-image: linear-gradient(#000, #000);
+}
+
 .title-anim__txt-white {
-  position: relative;
-  width: 100%;
   -webkit-text-fill-color: rgba(249, 249, 249, 0.1);
-  -webkit-background-clip: text;
-  background-repeat: no-repeat;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f9f9f9));
   background-image: -o-linear-gradient(#f9f9f9, #f9f9f9);
   background-image: linear-gradient(#f9f9f9, #f9f9f9);
-  background-size: 0% 100%;
 }
 
 .cursor-cases {
@@ -3040,27 +3038,7 @@ body::after {
   transition: opacity 0.45s ease 0s;
 }
 
-.need-service__gif-item .gif-img.gif-img_01._active {
-  opacity: 1;
-}
-
-.need-service__gif-item .gif-img.gif-img_02._active {
-  opacity: 1;
-}
-
-.need-service__gif-item .gif-img.gif-img_03._active {
-  opacity: 1;
-}
-
-.need-service__gif-item .gif-img.gif-img_04._active {
-  opacity: 1;
-}
-
-.need-service__gif-item .gif-img.gif-img_05._active {
-  opacity: 1;
-}
-
-.need-service__gif-item .gif-img.gif-img_06._active {
+.need-service__gif-item .gif-img._active {
   opacity: 1;
 }
 

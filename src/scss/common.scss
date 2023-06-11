@@ -126,25 +126,23 @@
     @include adaptiveValue("font-size", 40, 32, 3, 768, 360);
     line-height: calc(56/48);
   }
-	// .title-anim__txt-black
-	&__txt-black {
+	// .title-anim__txt
+	&__txt {
     position: relative;
     width: 100%;
-    -webkit-text-fill-color: rgba(0,0,0,0.1);
     -webkit-background-clip: text;
     background-repeat: no-repeat;
-    background-image: linear-gradient(#000, #000);
     background-size: 0% 100%;
+  }
+	// .title-anim__txt-black
+	&__txt-black {
+    -webkit-text-fill-color: rgba(0,0,0,0.1);
+    background-image: linear-gradient(#000, #000);
 	}
 	// .title-anim__txt-white
 	&__txt-white {
-    position: relative;
-    width: 100%;
     -webkit-text-fill-color: rgba(249, 249, 249, 0.1);
-    -webkit-background-clip: text;
-    background-repeat: no-repeat;
     background-image: linear-gradient(#f9f9f9, #f9f9f9);
-    background-size: 0% 100%;
 	}
 }
 

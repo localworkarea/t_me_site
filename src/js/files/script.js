@@ -17,38 +17,9 @@ import { flsModules } from "./modules.js";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
 */
-// GSAP Animation title ======================
-const animTitleGsap = document.querySelectorAll('.title-anim__title');
-
-if (animTitleGsap) {
-  gsap.to(".brands__txt-anim", {
-    scrollTrigger: {
-      trigger: ".brands__title-anim",
-      // markers: true,
-      start: "top bottom",
-      end: "top center",
-      scrub: 1,
-    },
-    duration: 1,
-    backgroundSize: "150% 100%",
-    ease:"none",
-  });
-  gsap.to(".promo__txt-anim", {
-    scrollTrigger: {
-      trigger: ".promo__title",
-      // markers: true,
-      start: "bottom bottom",
-      scrub: 1,
-    },
-    duration: 1,
-    backgroundSize: "150% 100%",
-    ease:"none",
-  });
-}
 
 // GSAP Slider Benefits ===================
 const container = document.querySelector(".slider-benefits");
-
 if (container) {
   const sections = gsap.utils.toArray(".slider-benefits__slide");
   let matchMedia = gsap.matchMedia();
@@ -83,50 +54,9 @@ if (container) {
     });
   });
 }
-if (animTitleGsap) {
-// -----------------------------------
-  gsap.to(".needs__title-txt", {
-    scrollTrigger: {
-      trigger: ".needs__title-title",
-      // markers: true,
-      start: "bottom bottom",
-      end: "bottom center",
-      scrub: 1,
-    },
-    duration: 1,
-    backgroundSize: "150% 100%",
-    ease:"none",
-  });
 
-  gsap.to(".cases__txt-anim", {
-    scrollTrigger: {
-      trigger: ".cases__title-anim",
-      // markers: true,
-      start: "bottom bottom",
-      end: "bottom center",
-      scrub: 1,
-    },
-    duration: 1,
-    backgroundSize: "150% 100%",
-    ease:"none",
-  });
-
-  gsap.to(".clients__title-txt", {
-    scrollTrigger: {
-      trigger: ".clients__title-anim",
-      // markers: true,
-      start: "top bottom",
-      end: "top center",
-      scrub: 1,
-    },
-    duration: 1,
-    backgroundSize: "100% 100%",
-    ease:"none",
-  });
-}
 // GSAP Slider Clients ===================
 const containerClients = document.querySelector(".clients");
-
 if (containerClients) {
   const sectionsClients = gsap.utils.toArray(".item-feedback");
   gsap.to(sectionsClients, {
@@ -143,49 +73,25 @@ if (containerClients) {
   });
 }
 
-if (animTitleGsap) {
-// .team__txt-anim ---------------------------
-  gsap.to(".team__txt-anim", {
-    scrollTrigger: {
-      trigger: ".team__title-anim",
-      // markers: true,
-      start: "top bottom",
-      end: "top center",
-      scrub: 1,
-    },
-    duration: 1,
-    backgroundSize: "100% 100%",
-    ease:"none",
-  });
-
-  gsap.to(".about__title-txt", {
-    scrollTrigger: {
-      trigger: ".about__title-anim",
-      // markers: true,
-      start: "top bottom",
-      end: "top center",
-      scrub: 1,
-    },
-    duration: 1,
-    backgroundSize: "100% 100%",
-    ease:"none",
-  });
-
-    // .chanels__title-anim
-    // .chanels__txt-anim
-  gsap.to(".chanels__txt-anim", {
-    scrollTrigger: {
-      trigger: ".chanels__title-anim",
-      // markers: true,
-      start: "top bottom",
-      end: "top center",
-      scrub: 1,
-    },
-    duration: 1,
-    backgroundSize: "100% 100%",
-    ease:"none",
+// GSAP Animation title ======================
+const titleElements = document.querySelectorAll(".title-anim__txt");
+if (titleElements.length > 0) {
+  titleElements.forEach((titleElement) => {
+    gsap.to(titleElement, {
+      scrollTrigger: {
+        trigger: titleElement,
+        start: "top bottom",
+        end: "top center",
+        scrub: 1,
+      },
+      duration: 1,
+      backgroundSize: "100% 100%",
+      ease: "none",
+    });
   });
 }
+
+
 // == Cusrom cursor ===========================================
 const cursor = document.querySelector(".cursor-cases");
 if (cursor) {
@@ -231,144 +137,21 @@ if (cursorTeam) {
   }
 }
 
-// SERVICES PAGE ======================================================
-if (animTitleGsap) {
-  let matchMedia = gsap.matchMedia();
-
-  matchMedia.add('(min-width: 769px)', () => {
-    // .need-service__title-anim
-    gsap.to(".need-service__txt-anim", {
-      scrollTrigger: {
-        // markers: true,
-        trigger: ".need-service__title-anim",
-        // start: "+=300 bottom",
-        // end: "+=300 center",
-        start: "top bottom",
-        end: "top center",
-        scrub: 1,
-      },
-      duration: 1,
-      backgroundSize: "100% 100%",
-      ease:"none",
-    });
-  });
-  matchMedia.add('(max-width: 768px)', () => {
-    // .need-service__title-anim
-    gsap.to(".need-service__txt-anim", {
-      scrollTrigger: {
-        // markers: true,
-        trigger: ".need-service__title-anim",
-        start: "top bottom",
-        end: "top center",
-        // start: "+=100 bottom",
-        // end: "+=100 center",
-        scrub: 1,
-      },
-      duration: 1,
-      backgroundSize: "100% 100%",
-      ease:"none",
-    });
-  });
-}
-if (animTitleGsap) {
-  // .why-service__title-anim
-  gsap.to(".why-service__txt-anim", {
-    scrollTrigger: {
-      // markers: true,
-      trigger: ".why-service__title-anim",
-      start: "top bottom",
-      end: "top center",
-      // start: "+=300 bottom",
-      // end: "+=300 center",
-      scrub: 1,
-    },
-    duration: 1,
-    backgroundSize: "100% 100%",
-    ease:"none",
-  });
-}
-
-if (animTitleGsap) {
-  // .package-service__title-anim
-  gsap.to(".package-service__txt-anim", {
-    scrollTrigger: {
-      // markers: true,
-      trigger: ".package-service__title-anim",
-      start: "top bottom",
-      end: "top center",
-      scrub: 1,
-    },
-    duration: 1,
-    backgroundSize: "100% 100%",
-    ease:"none",
-  });
-}
-if (animTitleGsap) {
-
-  // .steps-service__title-anim
-  gsap.to(".steps-service__txt-anim", {
-    scrollTrigger: {
-      // markers: true,
-      trigger: ".steps-service__title-anim",
-      start: "top bottom",
-      end: "top center",
-      scrub: 1,
-    },
-    duration: 1,
-    backgroundSize: "150% 100%",
-    ease:"none",
-  });
-}
-
+// SERVICES PAGE opacity img on hover events ======================================================
 const listNeedServiceTxt = document.querySelectorAll('.list-need-service__txt');
+const gifImg = document.querySelectorAll('.gif-img');
 if (listNeedServiceTxt) {
-  listNeedServiceTxt.forEach(item => {
-    const needServiceGif = document.querySelector('.need-service__gif');
-    const gifimg01 = document.querySelector('.gif-img_01');
-    const gifimg02 = document.querySelector('.gif-img_02');
-    const gifimg03 = document.querySelector('.gif-img_03');
-    const gifimg04 = document.querySelector('.gif-img_04');
-    const gifimg05 = document.querySelector('.gif-img_05');
-    const gifimg06 = document.querySelector('.gif-img_06');
-    item.addEventListener("mouseenter", function() {
-      if (item.classList.contains('list-need-serv-01')) {
-        gifimg01.classList.add('_active');
-      }
-      if (item.classList.contains('list-need-serv-02')) {
-        gifimg02.classList.add('_active');
-      }
-      if (item.classList.contains('list-need-serv-03')) {
-        gifimg03.classList.add('_active');
-      }
-      if (item.classList.contains('list-need-serv-04')) {
-        gifimg04.classList.add('_active');
-      }
-      if (item.classList.contains('list-need-serv-05')) {
-        gifimg05.classList.add('_active');
-      }
-      if (item.classList.contains('list-need-serv-06')) {
-        gifimg06.classList.add('_active');
+  listNeedServiceTxt.forEach((textItem, index) => {
+    textItem.addEventListener('mouseenter', () => {
+      if (index < gifImg.length) {
+        gifImg[index].classList.add('_active');
       }
     });
-    item.addEventListener("mouseleave", function() {
-      if (item.classList.contains('list-need-serv-01')) {
-        gifimg01.classList.remove('_active');
-      }
-      if (item.classList.contains('list-need-serv-02')) {
-        gifimg02.classList.remove('_active');
-      }
-      if (item.classList.contains('list-need-serv-03')) {
-        gifimg03.classList.remove('_active');
-      }
-      if (item.classList.contains('list-need-serv-04')) {
-        gifimg04.classList.remove('_active');
-      }
-      if (item.classList.contains('list-need-serv-05')) {
-        gifimg05.classList.remove('_active');
-      }
-      if (item.classList.contains('list-need-serv-06')) {
-        gifimg06.classList.remove('_active');
+
+    textItem.addEventListener('mouseleave', () => {
+      if (index < gifImg.length) {
+        gifImg[index].classList.remove('_active');
       }
     });
-  })
+  });
 }

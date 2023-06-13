@@ -11,6 +11,7 @@ import { gotoBlock } from "../scroll/gotoblock.js";
 Документація: https://template.fls.guru/template-docs/rabota-s-formami.html
 */
 
+
 // Робота із полями форми.
 export function formFieldsInit(options = { viewPass: false, autoHeight: false }) {
 	document.body.addEventListener("focusin", function (e) {

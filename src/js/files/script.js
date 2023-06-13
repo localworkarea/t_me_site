@@ -155,3 +155,92 @@ if (listNeedServiceTxt) {
     });
   });
 }
+
+
+// === FORMS BRIEF =================================================================
+const formBrief = document.querySelector('.form');
+const formBlocks = Array.from(document.querySelectorAll('.form__block'));
+const nextButton = document.querySelector('.form__btn-next');
+const submitButton = document.querySelector('.form__btn-submit');
+const counter = document.querySelector('.brief__counter');
+const progress = document.querySelector('.brief__progress');
+
+if (formBrief) {
+  let currentBlock = 0;
+  
+  function showCurrentBlock() {
+    formBlocks.forEach((block, index) => {
+      if (index === currentBlock) {
+        block.classList.remove('_hidden');
+      } else {
+        block.classList.add('_hidden');
+      }
+    });
+  }
+  
+  function updateCounter() {
+    counter.textContent = currentBlock + 1;
+  }
+  
+  function updateProgress() {
+    if (progress) {
+      const progressPercentage = ((currentBlock + 1) / formBlocks.length) * 100;
+      progress.querySelector('.brief__progress-bar').style.width = `${progressPercentage}%`;
+    }
+  }
+  
+  
+  function checkFieldsValidity() {
+    const currentFormFields = Array.from(formBlocks[currentBlock].querySelectorAll('input[required]'));
+    const currentFormCheckboxes = Array.from(formBlocks[currentBlock].querySelectorAll('input[type="checkbox"]'));
+    const requiredFieldsFilled = currentFormFields.every((field) => field.value.trim() !== '');
+    const checkboxChecked = currentFormCheckboxes.some((checkbox) => checkbox.checked);
+    
+    return requiredFieldsFilled && (currentFormCheckboxes.length === 0 || checkboxChecked);
+  }
+  
+  function handleNextButtonClick() {
+    if (checkFieldsValidity()) {
+      currentBlock++;
+      if (currentBlock >= formBlocks.length - 1) {
+        nextButton.classList.add('_hidden');
+        submitButton.classList.remove('_hidden');
+      }
+      showCurrentBlock();
+      updateCounter();
+      updateProgress();
+    }
+  }
+  
+  
+  submitButton.addEventListener('click', function (event) {
+    if (submitButton.disabled) {
+      event.preventDefault();
+    }
+  });
+  
+  if (nextButton) {
+    nextButton.addEventListener('click', handleNextButtonClick);
+  }
+  if (formBlocks.length > 0 && formBlocks[0].classList.contains('_hidden')) {
+    formBlocks[0].classList.remove('_hidden');
+  }
+  
+  window.addEventListener('DOMContentLoaded', () => {
+    updateProgress();
+    
+    const lastFormBlock = formBlocks[formBlocks.length - 1];
+    const lastFormCheckboxes = Array.from(lastFormBlock.querySelectorAll('input[type="checkbox"]'));
+    lastFormCheckboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', () => {
+        const checkboxChecked = lastFormCheckboxes.some((checkbox) => checkbox.checked);
+      
+        if (checkboxChecked) {
+          submitButton.classList.remove('disabled');
+        } else {
+          submitButton.classList.add('disabled');
+        }
+      });
+    });
+  });
+}

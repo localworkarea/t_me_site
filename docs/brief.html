@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>t:me клієнтський бриф</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<style>
+		body {
+			opacity: 0;
+			background-color: #01050d;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20230613154354">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper page-brief">
+		<header class="header">
+			<div class="header__container">
+				<a href="index.html" class="header__logo">
+					<img src="img/icons/logo.svg" alt="logo">
+				</a>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page-brief__bg bg-black__bg">
+				<picture><source srcset="img/background/1.webp" type="image/webp"><img src="img/background/1.jpg" alt="background"></picture>
+			</div>
+			<section class="brief">
+				<div class="brief__container">
+					<div class="brief__head">
+						<div class="brief__title-body">
+							<h1 class="brief__title txt-tt-i-bold">Клієнтський бриф</h1>
+							<p class="brief__sub-title txt-salma-pro">Заповніть бриф і ми зв'яжемося з вами в робочий час</p>
+						</div>
+						<div data-da=".form__buttons,650,2" class="brief__count-progress">
+							<div class="brief__numb brief__counter">1</div>
+							<div class="brief__progress">
+								<div class="brief__progress-bar"></div>
+							</div>
+							<div class="brief__numb">5</div>
+						</div>
+					</div>
+					<form class="form" data-dev data-popup-message="#form-message" action="#">
+						<div class="form__block _hidden">
+							<h2 class="form__title">1. Про компанію</h2>
+							<div class="form__inputs">
+								<div class="form__item">
+									<label for="formClient" class="form__label txt-salma-pro">Клієнт</label>
+									<input id="formClient" type="text" name="client" placeholder="Назва компанії" class="form__input txt-salma-pro">
+								</div>
+								<div class="form__item">
+									<label for="formUrl" class="form__label txt-salma-pro">Ваш сайт або соц. мережі</label>
+									<input id="formUrl" type="text" name="url" placeholder="Ваш сайт або соц. мережі" class="form__input txt-salma-pro">
+								</div>
+								<div class="form__item">
+									<label for="formName" class="form__label txt-salma-pro">Ваше ім’я *</label>
+									<input id="formName" type="text" name="name" placeholder="Ваше ім’я" class="form__input txt-salma-pro" data-validate data-required required data-error="Це поле обовязкове для заповнення">
+								</div>
+								<div class="form__item">
+									<label for="formContact" class="form__label txt-salma-pro">Контакт для звязку *</label>
+									<input id="formContact" type="text" name="contact" placeholder="Номер телефону, пошта, телеграм" class="form__input txt-salma-pro" data-validate data-required required data-error="Це поле обовязкове для заповнення">
+								</div>
+							</div>
+						</div>
+
+						<div class="form__block _hidden">
+							<h2 class="form__title">2. Виберіть послугу, яка вас цікавить</h2>
+							<div class="form__checkbox">
+								<div class="checkbox">
+									<input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="c_1" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">Реклама в Telegram-каналах і просування продукт</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_2" class="checkbox__input" type="checkbox" value="2" name="form[]">
+									<label for="c_2" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">Розробка Telegram-бота </span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_3" class="checkbox__input" type="checkbox" value="3" name="form[]">
+									<label for="c_3" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">Створення комерційного / власного каналу під ключ </span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_4" class="checkbox__input" type="checkbox" value="4" name="form[]">
+									<label for="c_4" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">Комплексне рішення </span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="form__block _hidden">
+							<h2 class="form__title">3. Які цілі ви ставите перед собою?</h2>
+							<div class="form__checkbox">
+								<div class="checkbox">
+									<input id="c_5" class="checkbox__input" type="checkbox" value="5" name="form[]">
+									<label for="c_5" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">Підвищення впізнаваності бренду </span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_6" class="checkbox__input" type="checkbox" value="6" name="form[]">
+									<label for="c_6" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">Підтримка репутації бренду </span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_7" class="checkbox__input" type="checkbox" value="7" name="form[]">
+									<label for="c_7" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">Створення популярної і активної спільноти </span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_8" class="checkbox__input" type="checkbox" value="8" name="form[]">
+									<label for="c_8" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">Комунікація зі споживачами, зворотний зв'язок </span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_9" class="checkbox__input" type="checkbox" value="9" name="form[]">
+									<label for="c_9" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">Підвищення лояльності споживачів </span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_10" class="checkbox__input" type="checkbox" value="10" name="form[]">
+									<label for="c_10" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">Зростання трафіку на сайт </span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_11" class="checkbox__input" type="checkbox" value="11" name="form[]">
+									<label for="c_11" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">Запуск нового бренду </span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_12" class="checkbox__input" type="checkbox" value="12" name="form[]">
+									<label for="c_12" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro"> Підтримка іміджу, підвищення конкурентоспроможності </span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_13" class="checkbox__input" type="checkbox" value="13" name="form[]">
+									<label for="c_13" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">Стати лідером в digital-просторі </span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_14" class="checkbox__input" type="checkbox" value="14" name="form[]">
+									<label for="c_14" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">Інше</span>
+									</label>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="form__block _hidden">
+							<h2 class="form__title">4. Термін реалізації та запланований бюджет</h2>
+							<div class="form__line">
+								<div class="checkbox">
+									<input id="c_15" class="checkbox__input" type="checkbox" value="15" name="form[]">
+									<label for="c_15" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">До 1 місяця</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_16" class="checkbox__input" type="checkbox" value="16" name="form[]">
+									<label for="c_16" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">1-3 місяці</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_17" class="checkbox__input" type="checkbox" value="17" name="form[]">
+									<label for="c_17" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">3-6 місяців</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_18" class="checkbox__input" type="checkbox" value="18" name="form[]">
+									<label for="c_18" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">більше 6 місяців</span>
+									</label>
+								</div>
+							</div>
+							<div class="form__line">
+								<div class="checkbox">
+									<input id="c_19" class="checkbox__input" type="checkbox" value="19" name="form[]">
+									<label for="c_19" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">До $1К</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_20" class="checkbox__input" type="checkbox" value="20" name="form[]">
+									<label for="c_20" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">$1К-5К</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_21" class="checkbox__input" type="checkbox" value="21" name="form[]">
+									<label for="c_21" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">$5К-10К</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_22" class="checkbox__input" type="checkbox" value="22" name="form[]">
+									<label for="c_22" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">$10К-20К</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<input id="c_23" class="checkbox__input" type="checkbox" value="23" name="form[]">
+									<label for="c_23" class="checkbox__label">
+										<span class="checkbox__text txt-salma-pro">більше $20К</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="form__block form__block-age _hidden">
+							<h2 class="form__title">5. Цільова аудиторія</h2>
+							<div class="form__age-group">
+								<div class="form__column">
+									<div class="checkbox">
+										<input id="c_24" class="checkbox__input" type="checkbox" value="24" name="form[]">
+										<label for="c_24" class="checkbox__label">
+											<span class="checkbox__imgs">
+												<picture><source srcset="img/form/man.webp" type="image/webp"><img class="checkbox__img" src="img/form/man.png" alt="man"></picture>
+												<picture><source srcset="img/form/woman.webp" type="image/webp"><img class="checkbox__img" src="img/form/woman.png" alt="woman"></picture>
+											</span>
+											<span class="checkbox__text checkbox__text_age txt-salma-pro">14-20</span>
+										</label>
+									</div>
+									<div class="checkbox">
+										<input id="c_25" class="checkbox__input" type="checkbox" value="25" name="form[]">
+										<label for="c_25" class="checkbox__label">
+											<span class="checkbox__imgs">
+												<picture><source srcset="img/form/man.webp" type="image/webp"><img class="checkbox__img" src="img/form/man.png" alt="man"></picture>
+												<picture><source srcset="img/form/woman.webp" type="image/webp"><img class="checkbox__img" src="img/form/woman.png" alt="woman"></picture>
+											</span>
+											<span class="checkbox__text checkbox__text_age txt-salma-pro">21-35</span>
+										</label>
+									</div>
+									<div class="checkbox">
+										<input id="c_26" class="checkbox__input" type="checkbox" value="26" name="form[]">
+										<label for="c_26" class="checkbox__label">
+											<span class="checkbox__imgs">
+												<picture><source srcset="img/form/man.webp" type="image/webp"><img class="checkbox__img" src="img/form/man.png" alt="man"></picture>
+												<picture><source srcset="img/form/woman.webp" type="image/webp"><img class="checkbox__img" src="img/form/woman.png" alt="woman"></picture>
+											</span>
+											<span class="checkbox__text checkbox__text_age txt-salma-pro">35+</span>
+										</label>
+									</div>
+								</div>
+
+								<div class="form__column">
+									<div class="checkbox">
+										<input id="c_27" class="checkbox__input" type="checkbox" value="27" name="form[]">
+										<label for="c_27" class="checkbox__label">
+											<span class="checkbox__imgs">
+												<picture><source srcset="img/form/man.webp" type="image/webp"><img class="checkbox__img" src="img/form/man.png" alt="man"></picture>
+											</span>
+											<span class="checkbox__text checkbox__text_age txt-salma-pro">14-20</span>
+										</label>
+									</div>
+									<div class="checkbox">
+										<input id="c_28" class="checkbox__input" type="checkbox" value="28" name="form[]">
+										<label for="c_28" class="checkbox__label">
+											<span class="checkbox__imgs">
+												<picture><source srcset="img/form/man.webp" type="image/webp"><img class="checkbox__img" src="img/form/man.png" alt="man"></picture>
+											</span>
+											<span class="checkbox__text checkbox__text_age txt-salma-pro">21-35</span>
+										</label>
+									</div>
+									<div class="checkbox">
+										<input id="c_29" class="checkbox__input" type="checkbox" value="29" name="form[]">
+										<label for="c_29" class="checkbox__label">
+											<span class="checkbox__imgs">
+												<picture><source srcset="img/form/man.webp" type="image/webp"><img class="checkbox__img" src="img/form/man.png" alt="man"></picture>
+											</span>
+											<span class="checkbox__text checkbox__text_age txt-salma-pro">35+</span>
+										</label>
+									</div>
+								</div>
+
+								<div class="form__column">
+									<div class="checkbox">
+										<input id="c_30" class="checkbox__input" type="checkbox" value="30" name="form[]">
+										<label for="c_30" class="checkbox__label">
+											<span class="checkbox__imgs">
+												<picture><source srcset="img/form/woman.webp" type="image/webp"><img class="checkbox__img" src="img/form/woman.png" alt="woman"></picture>
+											</span>
+											<span class="checkbox__text checkbox__text_age txt-salma-pro">14-20</span>
+										</label>
+									</div>
+									<div class="checkbox">
+										<input id="c_31" class="checkbox__input" type="checkbox" value="31" name="form[]">
+										<label for="c_31" class="checkbox__label">
+											<span class="checkbox__imgs">
+												<picture><source srcset="img/form/woman.webp" type="image/webp"><img class="checkbox__img" src="img/form/woman.png" alt="woman"></picture>
+											</span>
+											<span class="checkbox__text checkbox__text_age txt-salma-pro">21-35</span>
+										</label>
+									</div>
+									<div class="checkbox">
+										<input id="c_32" class="checkbox__input" type="checkbox" value="32" name="form[]">
+										<label for="c_32" class="checkbox__label">
+											<span class="checkbox__imgs">
+												<picture><source srcset="img/form/woman.webp" type="image/webp"><img class="checkbox__img" src="img/form/woman.png" alt="woman"></picture>
+											</span>
+											<span class="checkbox__text checkbox__text_age txt-salma-pro">35+</span>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form__age-options option-age">
+								<h3 class="form__title option-age__title">Був досвід роботи у Telegram?</h3>
+								<div class="option-age__options">
+									<div class="option-age__item checkbox">
+										<input id="formYes" type="radio" value="так" name="досвід" class="options__input checkbox__input">
+										<label for="formYes" class="options__label checkbox__label"><span class="checkbox__text txt-salma-pro">Так, був</span></label>
+									</div>
+									<div class="option-age__item checkbox">
+										<input id="formNo" type="radio" value="ні" name="досвід" class="options__input checkbox__input">
+										<label for="formNo" class="options__label checkbox__label"><span class="checkbox__text txt-salma-pro">Ні, не було</span></label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form__item">
+								<label for="formMessage" class="form__label txt-salma-pro">Додаткова інформація</label>
+								<textarea name="message" id="formMessage" class="form__input" placeholder="Може розповісти нам трішечки більше про вашу компанію" data-autoheight></textarea>
+							</div>
+
+						</div>
+
+						<div class="form__buttons">
+							<button type="button" class="form__btn form__btn-next btn">Далі</button>
+							<button type="submit" class="form__btn form__btn-submit btn _hidden disabled">Відправити</button>
+						</div>
+					</form>
+
+				</div>
+			</section>
+		</main>
+	</div>
+	<div id="form-message" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__bg bg-black__bg">
+					<picture><source srcset="img/background/1.webp" type="image/webp"><img src="img/background/1.jpg" alt="background"></picture>
+				</div>
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text txt-tt-i-bold ">
+					Дякуємо!<br> Найближчим часом ми зв'яжемося з вами!
+				</div>
+				<a href="index.html" class="popup__btn btn">На головну</a>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js?_v=20230613154354"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js?_v=20230613154354"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js?_v=20230613154354"></script>
+
+	<script src="js/app.min.js?_v=20230613154354"></script>
+</body>
+
+</html>

@@ -681,7 +681,12 @@
       width: 113%;
       background-color: #797C7F;
       opacity: 0.1;
-      // opacity: 1;
+      @media (max-width: em(520)){
+        top: rem(30);          
+      }
+      @media (max-width: em(390)){
+         top: rem(26); 
+      }
     }
     &::before {
       left: 0;

@@ -7104,6 +7104,13 @@ body::after {
   }
 }
 
+@media (max-width: 32.5em) {
+  .list-steps-service__item::before,
+  .list-steps-service__item::after {
+    top: 1.875rem;
+  }
+}
+
 @media (max-width: 30.625em) {
   .promo-main__btns {
     -webkit-box-orient: vertical;
@@ -7115,6 +7122,13 @@ body::after {
 
   .promo-main__btn {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 24.375em) {
+  .list-steps-service__item::before,
+  .list-steps-service__item::after {
+    top: 1.625rem;
   }
 }
 

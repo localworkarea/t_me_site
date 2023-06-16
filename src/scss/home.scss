@@ -399,13 +399,20 @@
 
 .item-services {
   flex: 1;
-  transition: flex-grow 0.5s ease-in-out; 
+  transition: flex-grow 0.8s ease-in-out; 
   overflow: hidden;
   min-height: 0;
   &:hover{
     flex: 2;
     .item-services__image img {
-      transform: scale(1);
+      @media (max-width:$mobile){
+        transform: scale(1.1);
+      }
+    }
+  }
+  &:nth-child(3) {
+    @media (max-width:$mobile){
+       grid-column: span 2; 
     }
   }
   // .item-services__image
@@ -425,7 +432,7 @@
       object-fit: cover;
       display: block;
       transition: transform 0.5s ease-in-out;
-      transform: scale(1.1);
+      transform: scale(1);
     }
   }
   // .item-services__txt
@@ -1368,9 +1375,9 @@
     .item-cases {
       &:nth-child(1) {
         width: 49%;
-        @include adaptiveValue("margin-top", 240, 620, 0, 1920, 1440);
-        @include adaptiveValue("margin-top", 620, 115, 3, 1440, 768);
-        @include adaptiveValue("margin-top", 115, 120, 3, 768, 360);
+        @include adaptiveValue("margin-top", 240, 239, 0, 1920, 1440);
+        @include adaptiveValue("margin-top", 239, 115, 3, 1440, 768);
+        @include adaptiveValue("margin-top", 115, 80, 3, 768, 360);
         @media (max-width:$mobile){
           width: 47%; 
         }
@@ -1526,6 +1533,11 @@
   &._watcher-view {
     opacity: 1;
   }
+
+  // 424-354-340-260,
+  @include adaptiveValue("height", 425, 354, 0, 1920, 1440);
+  @include adaptiveValue("height", 354, 340, 3, 1440, 768);
+  @include adaptiveValue("height", 340, 260, 3, 768, 360);  
   // .item-feedback__avatar
   &__avatar {
   }
@@ -1544,6 +1556,7 @@
   }
   // .item-feedback__body
   &__body {
+    height: 100%;
     position: relative;
     background-color: #000;
     @include adaptiveValue("padding-top", 32, 16, 0, 768, 360);
@@ -1565,6 +1578,12 @@
        left: rem(-10); 
     }
 	}
+	// .item-feedback__title
+	&__title {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 48, 16, 0, 768, 360);
+    }
+	}
   // .item-feedback__name
   &__name {
     color: $blue;
@@ -1582,9 +1601,7 @@
     @include adaptiveValue("font-size", 20, 16, 0, 1440, 768);
     @include adaptiveValue("font-size", 16, 12, 3, 768, 360);
     line-height: calc(24/20);
-    &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 48, 16, 0, 768, 360);
-    }
+
   }
   // .item-feedback__feedback
   &__feedback {
@@ -1888,13 +1905,13 @@
 // == 11. CHANELS SECTION ====================================================
 //----------------------------------------------------------------------------
 .chanels {
-@include adaptiveValue("padding-top", 240, 200, 0, 1920, 1440);
-@include adaptiveValue("padding-top", 200, 160, 3, 1440, 768);
-@include adaptiveValue("padding-top", 160, 80, 3, 768, 360);
+@include adaptiveValue("padding-top", 120, 80, 0, 1920, 1440);
+// @include adaptiveValue("padding-top", 100, 80, 3, 1440, 768);
+@include adaptiveValue("padding-top", 100, 80, 3, 768, 360);
 
-@include adaptiveValue("padding-bottom", 240, 200, 0, 1920, 1440);
-@include adaptiveValue("padding-bottom", 200, 160, 3, 1440, 768);
-@include adaptiveValue("padding-bottom", 160, 80, 3, 768, 360);
+@include adaptiveValue("padding-bottom", 120, 100, 0, 1920, 1440);
+// @include adaptiveValue("padding-bottom", 200, 160, 3, 1440, 768);
+@include adaptiveValue("padding-bottom", 100, 60, 3, 768, 360);
   // .chanels__container
   &__container {
     display: grid;

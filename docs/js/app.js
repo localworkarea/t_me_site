@@ -4610,8 +4610,10 @@
             }));
         }));
         const gifContainer = document.querySelector(".need-service__gif");
-        const gifItems = gifContainer.querySelectorAll(".need-service__gif-item");
-        if (gifItems.length < 4) gifContainer.classList.add("_el-less-than"); else gifContainer.classList.remove("_el-less-than");
+        if (gifContainer) {
+            const gifItems = gifContainer.querySelectorAll(".need-service__gif-item");
+            if (gifItems.length < 4) gifContainer.classList.add("_el-less-than"); else gifContainer.classList.remove("_el-less-than");
+        }
         const formBrief = document.querySelector(".form");
         const formBlocks = Array.from(document.querySelectorAll(".form__block"));
         const nextButton = document.querySelector(".form__btn-next");

@@ -204,18 +204,21 @@ if (listNeedServiceTxt) {
 // ДОбавление класса к .need-service__gif если элементов больше или меньше 4х ==========
 // Получаем родительский элемент
 const gifContainer = document.querySelector('.need-service__gif');
+if (gifContainer) {
 
-// Получаем все элементы need-service__gif-item
-const gifItems = gifContainer.querySelectorAll('.need-service__gif-item');
-
-// Проверяем количество элементов
-if (gifItems.length < 4) {
-  // Добавляем класс к родительскому элементу
-  gifContainer.classList.add('_el-less-than');
-} else {
-  // Удаляем класс у родительского элемента
-  gifContainer.classList.remove('_el-less-than');
+  // Получаем все элементы need-service__gif-item
+  const gifItems = gifContainer.querySelectorAll('.need-service__gif-item');
+  
+  // Проверяем количество элементов
+  if (gifItems.length < 4) {
+    // Добавляем класс к родительскому элементу
+    gifContainer.classList.add('_el-less-than');
+  } else {
+    // Удаляем класс у родительского элемента
+    gifContainer.classList.remove('_el-less-than');
+  }
 }
+
 
 
 // === FORMS BRIEF =================================================================

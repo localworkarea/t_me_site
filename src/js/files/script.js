@@ -74,22 +74,67 @@ if (containerClients) {
 }
 
 // GSAP Animation title ======================
-const titleElements = document.querySelectorAll(".title-anim__txt");
-if (titleElements.length > 0) {
-  titleElements.forEach((titleElement) => {
-    gsap.to(titleElement, {
-      scrollTrigger: {
-        trigger: titleElement,
-        start: "top bottom",
-        end: "top center",
-        scrub: 1,
-      },
-      duration: 1,
-      backgroundSize: "100% 100%",
-      ease: "none",
-    });
+// const titleElements = document.querySelectorAll(".title-anim__txt");
+// if (titleElements.length > 0) {
+//   titleElements.forEach((titleElement) => {
+//     gsap.to(titleElement, {
+//       scrollTrigger: {
+//         trigger: titleElement,
+//         start: "top bottom",
+//         end: "top center",
+//         scrub: 1,
+//       },
+//       duration: 1,
+//       backgroundSize: "100% 100%",
+//       ease: "none",
+//     });
+//   });
+// }
+
+// -----------------
+// Анимация загзоловка title-anim__title на чистом JS ==================================
+// Функция для проверки, находится ли элемент во вьюпорте
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+  return (
+    rect.top <= viewportHeight &&
+    rect.bottom >= 0
+  );
+}
+
+// Функция для обработки события прокрутки страницы
+function handleScroll() {
+  var titles = document.querySelectorAll('.title-anim__txt');
+
+  titles.forEach(function (title) {
+    var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    var titleTop = title.getBoundingClientRect().top + scrollPos;
+    var titleBottom = titleTop + title.offsetHeight;
+    var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    var gradientHeight = viewportHeight / 2; // Задаем высоту градиента в половину высоты вьюпорта
+
+    // Рассчитываем процент прокрутки заголовка во вьюпорте
+    var progress = Math.max(0, Math.min(1, (scrollPos + viewportHeight - titleTop) / gradientHeight));
+
+    // Применяем значения background-size в зависимости от прокрутки, если заголовок находится во вьюпорте
+    if (isElementInViewport(title)) {
+      title.style.backgroundSize = (progress * 100) + '% 100%';
+    } else {
+      title.style.backgroundSize = '0% 100%';
+    }
   });
 }
+
+// Обработчик события прокрутки страницы
+window.addEventListener('scroll', handleScroll);
+// Обработчик события загрузки страницы
+window.addEventListener('load', handleScroll);
+// Запускаем обработку события прокрутки и загрузки страницы для инициального состояния
+handleScroll();
+
+
+
 
 
 // == Cusrom cursor ===========================================
@@ -154,6 +199,22 @@ if (listNeedServiceTxt) {
       }
     });
   });
+}
+
+// ДОбавление класса к .need-service__gif если элементов больше или меньше 4х ==========
+// Получаем родительский элемент
+const gifContainer = document.querySelector('.need-service__gif');
+
+// Получаем все элементы need-service__gif-item
+const gifItems = gifContainer.querySelectorAll('.need-service__gif-item');
+
+// Проверяем количество элементов
+if (gifItems.length < 4) {
+  // Добавляем класс к родительскому элементу
+  gifContainer.classList.add('_el-less-than');
+} else {
+  // Удаляем класс у родительского элемента
+  gifContainer.classList.remove('_el-less-than');
 }
 
 

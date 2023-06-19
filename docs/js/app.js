@@ -4547,20 +4547,26 @@
                 }
             });
         }
-        const titleElements = document.querySelectorAll(".title-anim__txt");
-        if (titleElements.length > 0) titleElements.forEach((titleElement => {
-            gsap.to(titleElement, {
-                scrollTrigger: {
-                    trigger: titleElement,
-                    start: "top bottom",
-                    end: "top center",
-                    scrub: 1
-                },
-                duration: 1,
-                backgroundSize: "100% 100%",
-                ease: "none"
-            });
-        }));
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+            return rect.top <= viewportHeight && rect.bottom >= 0;
+        }
+        function handleScroll() {
+            var titles = document.querySelectorAll(".title-anim__txt");
+            titles.forEach((function(title) {
+                var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+                var titleTop = title.getBoundingClientRect().top + scrollPos;
+                title.offsetHeight;
+                var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+                var gradientHeight = viewportHeight / 2;
+                var progress = Math.max(0, Math.min(1, (scrollPos + viewportHeight - titleTop) / gradientHeight));
+                if (isElementInViewport(title)) title.style.backgroundSize = progress * 100 + "% 100%"; else title.style.backgroundSize = "0% 100%";
+            }));
+        }
+        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("load", handleScroll);
+        handleScroll();
         const cursor = document.querySelector(".cursor-cases");
         if (cursor) document.addEventListener("mousemove", (e => {
             cursor.style.cssText = "left:" + e.clientX + "px; top:" + e.clientY + "px;";
@@ -4603,6 +4609,9 @@
                 if (index < gifImg.length) gifImg[index].classList.remove("_active");
             }));
         }));
+        const gifContainer = document.querySelector(".need-service__gif");
+        const gifItems = gifContainer.querySelectorAll(".need-service__gif-item");
+        if (gifItems.length < 4) gifContainer.classList.add("_el-less-than"); else gifContainer.classList.remove("_el-less-than");
         const formBrief = document.querySelector(".form");
         const formBlocks = Array.from(document.querySelectorAll(".form__block"));
         const nextButton = document.querySelector(".form__btn-next");

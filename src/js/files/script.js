@@ -182,6 +182,7 @@ if (cursorTeam) {
   }
 }
 
+
 // SERVICES PAGE opacity img on hover events ======================================================
 const listNeedServiceTxt = document.querySelectorAll('.list-need-service__txt');
 const gifImg = document.querySelectorAll('.gif-img');

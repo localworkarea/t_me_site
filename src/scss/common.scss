@@ -125,15 +125,19 @@
     @include adaptiveValue("font-size", 48, 40, 0, 1440, 768);
     @include adaptiveValue("font-size", 40, 32, 3, 768, 360);
     line-height: calc(56/48);
+    position: relative;
   }
 	// .title-anim__txt
 	&__txt {
-    position: relative;
-    width: 100%;
+    // display: inline;
+    // position: relative;
+    // width: 100%;
     -webkit-background-clip: text;
     background-repeat: no-repeat;
     background-size: 0% 100%;
     transition: background-size 0.2s linear;
+
+    background-attachment: scroll; 
   }
 	// .title-anim__txt-black
 	&__txt-black {
@@ -146,7 +150,6 @@
     background-image: linear-gradient(#f9f9f9, #f9f9f9);
 	}
 }
-
 
 // Custom cursor =========================================================
 .cursor-cases {

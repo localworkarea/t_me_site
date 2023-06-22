@@ -229,28 +229,32 @@ display: flex;
 	// .promo-case__img-wrap
 	&__img-wrap {
     @extend %animate;
-
     overflow: hidden;
     position: relative;
-    background-color: #d9d9d9;
+    // background-color: #d9d9d9;
 
-    width: 65%;
-    @include adaptiveValue("height", 568, 408, 0, 1920, 1440);
-    @include adaptiveValue("height", 408, 344, 3, 1440, 768);
-    @include adaptiveValue("height", 344, 328, 3, 768, 360);
-    @media (max-width: em(1300)){
-        width: 100%;
-    }
-    
+    // width: 65%;
+    // @include adaptiveValue("height", 568, 408, 0, 1920, 1440);
+    // @include adaptiveValue("height", 408, 344, 3, 1440, 768);
+    // @include adaptiveValue("height", 344, 328, 3, 768, 360);
+    // @media (max-width: em(1300)){
+    //     width: 100%;
+    // }
+
+    height: fit-content;
+    width: fit-content;
+    @include adaptiveValue("max-height", 568, 408, 0, 1920, 1440);
+    @include adaptiveValue("max-height", 408, 344, 3, 1440, 768);
+    @include adaptiveValue("max-height", 344, 328, 3, 768, 360);
 	}
 	// .promo-case__img
 	&__img {
     position: relative;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    // object-fit: cover;
+    object-fit: contain;
     z-index: 1;
-    scale: 1.1;
 	}
 }
 

@@ -245,6 +245,8 @@
 		width: 100%;
 		position: absolute;
 		bottom: 0;
+		pointer-events: none;
+
 	}
 	// .menu__btn-slider
 	&__btn-slider {
@@ -253,6 +255,7 @@
 		border-radius: 50%;
 		overflow: hidden;
 		background-color: $blue;
+		pointer-events: all;
 
 		display: flex;
 		align-items: center;

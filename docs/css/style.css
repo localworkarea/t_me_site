@@ -3824,6 +3824,32 @@ body::after {
           transition-delay: 0.75s;
 }
 
+.package-service__container._watcher-view .package-service__txt:nth-child(7) {
+  -webkit-transition-delay: 0.75s;
+       -o-transition-delay: 0.75s;
+          transition-delay: 0.75s;
+}
+
+.package-service__container._watcher-view .package-service__txt:nth-child(7)::before {
+  width: 100%;
+  -webkit-transition-delay: 0.75s;
+       -o-transition-delay: 0.75s;
+          transition-delay: 0.75s;
+}
+
+.package-service__container._watcher-view .package-service__txt:nth-child(8) {
+  -webkit-transition-delay: 0.75s;
+       -o-transition-delay: 0.75s;
+          transition-delay: 0.75s;
+}
+
+.package-service__container._watcher-view .package-service__txt:nth-child(8)::before {
+  width: 100%;
+  -webkit-transition-delay: 0.75s;
+       -o-transition-delay: 0.75s;
+          transition-delay: 0.75s;
+}
+
 .package-service__txt {
   position: relative;
   opacity: 0;

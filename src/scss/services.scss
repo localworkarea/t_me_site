@@ -580,6 +580,20 @@
             transition-delay: 0.75s;
           }
         }
+        &:nth-child(7) {
+          transition-delay: 0.75s;
+          &::before {
+            width: 100%;
+            transition-delay: 0.75s;
+          }
+        }
+        &:nth-child(8) {
+          transition-delay: 0.75s;
+          &::before {
+            width: 100%;
+            transition-delay: 0.75s;
+          }
+        }
       }
     }
 

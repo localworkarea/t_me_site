@@ -2546,14 +2546,17 @@
     &::before {
       content: '';
       position: absolute;
-      left: 17px;
       @include adaptiveValue("top", 13, 8,0,1920,480);
       border-radius: 50%;
       background-color: $blue;
-      @include adaptiveValue("width", 12, 6,0,1920,1440);
-      @include adaptiveValue("height", 12, 6,0,1920,1440);
+      @include adaptiveValue("width", 12, 6,0,1920,480);
+      @include adaptiveValue("height", 12, 6,0,1920,480);
+      left: 8px;
+      @media (max-width: em(1440.98)){
+          // left: 17px;
+      }
       @media (max-width:$mobileSmall){
-         left: 5px; 
+         left: 4px; 
       }
     }
   }

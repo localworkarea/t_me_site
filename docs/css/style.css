@@ -3511,9 +3511,9 @@ body::after {
 .article ul li::before {
   content: "";
   position: absolute;
-  left: 17px;
   border-radius: 50%;
   background-color: #008AF5;
+  left: 8px;
 }
 
 .article figure img {
@@ -5938,14 +5938,6 @@ body::after {
     padding-top: 9.375rem;
   }
 
-  .article ul li::before {
-    width: 0.375rem;
-  }
-
-  .article ul li::before {
-    height: 0.375rem;
-  }
-
   .article figcaption {
     font-size: 0.875rem;
   }
@@ -7312,7 +7304,15 @@ body::after {
   }
 
   .article ul li::before {
-    left: 5px;
+    width: 0.375rem;
+  }
+
+  .article ul li::before {
+    height: 0.375rem;
+  }
+
+  .article ul li::before {
+    left: 4px;
   }
 
   .article ol li {
@@ -12751,30 +12751,6 @@ body::after {
     }
 }
 
-@supports (width: clamp( 0.375rem , -0.75rem  +  1.25vw , 0.75rem )) {
-    .article ul li::before {
-      width: clamp( 0.375rem , -0.75rem  +  1.25vw , 0.75rem );
-    }
-}
-
-@supports not (width: clamp( 0.375rem , -0.75rem  +  1.25vw , 0.75rem )) {
-    .article ul li::before {
-      width: calc(0.375rem + 0.375 * (100vw - 90rem) / 30);
-    }
-}
-
-@supports (height: clamp( 0.375rem , -0.75rem  +  1.25vw , 0.75rem )) {
-    .article ul li::before {
-      height: clamp( 0.375rem , -0.75rem  +  1.25vw , 0.75rem );
-    }
-}
-
-@supports not (height: clamp( 0.375rem , -0.75rem  +  1.25vw , 0.75rem )) {
-    .article ul li::before {
-      height: calc(0.375rem + 0.375 * (100vw - 90rem) / 30);
-    }
-}
-
 @supports (font-size: clamp( 0.875rem , -0.625rem  +  1.6666666667vw , 1.375rem )) {
     .article figcaption {
       font-size: clamp( 0.875rem , -0.625rem  +  1.6666666667vw , 1.375rem );
@@ -13935,6 +13911,30 @@ body::after {
 @supports not (top: clamp( 0.5rem , 0.3958333333rem  +  0.3472222222vw , 0.8125rem )) {
     .article ul li::before {
       top: calc(0.5rem + 0.3125 * (100vw - 30rem) / 90);
+    }
+}
+
+@supports (width: clamp( 0.375rem , 0.25rem  +  0.4166666667vw , 0.75rem )) {
+    .article ul li::before {
+      width: clamp( 0.375rem , 0.25rem  +  0.4166666667vw , 0.75rem );
+    }
+}
+
+@supports not (width: clamp( 0.375rem , 0.25rem  +  0.4166666667vw , 0.75rem )) {
+    .article ul li::before {
+      width: calc(0.375rem + 0.375 * (100vw - 30rem) / 90);
+    }
+}
+
+@supports (height: clamp( 0.375rem , 0.25rem  +  0.4166666667vw , 0.75rem )) {
+    .article ul li::before {
+      height: clamp( 0.375rem , 0.25rem  +  0.4166666667vw , 0.75rem );
+    }
+}
+
+@supports not (height: clamp( 0.375rem , 0.25rem  +  0.4166666667vw , 0.75rem )) {
+    .article ul li::before {
+      height: calc(0.375rem + 0.375 * (100vw - 30rem) / 90);
     }
 }
 

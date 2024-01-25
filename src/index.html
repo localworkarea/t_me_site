@@ -45,7 +45,7 @@
 								<p class="promo-main__sub-title txt-salma-pro">Просуваємо бренди у найдинамічнішому месенджері на ринку</p>
 								<div class="promo-main__btns">
 									<a href="#" class="promo-main__btn btn">Написати нам</a>
-									<a href="#" class="promo-main__btn btn">Розмістити рекламу</a>
+									<a href="https://telegram.agency/brief/" class="promo-main__btn btn">Заповнити бриф</a>
 								</div>
 							</div>
 						</div>
@@ -102,10 +102,11 @@
 				<section class="brands">
 					<div class="brands__container">
 						<div class="brands__wrapper">
-							<div class="brands__title">
+							<div data-watch-threshold="0.3" data-watch class="brands__title">
 								<h2 class="brands__title-anim title-anim__title txt-tt-i-reg">
-									<span class="brands__txt-anim title-anim__txt title-anim__txt-black">Великі <span class="txt-tt-i-bold">бренди</span> люблять нас</span>
+									<span class="brands__txt-anim title-anim__txt title-anim__txt-black"><span class="txt-tt-i-bold">Бренди,</span><br> які нам довірились</span>
 								</h2>
+								<a href="#" data-da=".items-brands__item_btn,1100" class="items-brands__btn btn">Розмістити рекламу</a>
 							</div>
 							<div data-watch-threshold="0.3" data-watch class="brands__items items-brands">
 								<div class="items-brands__item">
@@ -153,13 +154,11 @@
 										<img src="@img/home/brands/realme.svg" alt="brand">
 									</div>
 								</div>
+								<div class="items-brands__item items-brands__item_btn"></div>
 								<div class="items-brands__item items-brands__item_txt">
 									<div class="items-brands__txt txt-salma-pro">
 										Наша агенція допоможе кожному, хто планує опановувати Telegram.
 									</div>
-								</div>
-								<div class="items-brands__item items-brands__item_btn">
-									<a href="#" class="items-brands__btn btn">Розмістити рекламу</a>
 								</div>
 							</div>
 						</div>
@@ -236,7 +235,7 @@
 				</section>
 				<section class="benefits">
 					<div class="benefits__container">
-						<div class="benefits__texts txt-benefits">
+						<!-- <div class="benefits__texts">
 							<p data-watch-threshold="0.3" data-watch data-watch-once class="txt-benefits__paragraph">
 								<span class="txt-benefits__txt"><span>У&nbsp;</span></span> 
 								<span class="txt-benefits__txt"><span>2023&nbsp;</span></span> 
@@ -262,6 +261,12 @@
 								<span class="txt-benefits__txt"><span>користувачів&nbsp;</span></span> 
 								<span class="txt-benefits__txt txt-tt-i-bold"><span>10 мільйонів.</span></span> 
 							</p>
+						</div> -->
+						<div class="benefits__texts txt-benefits" data-watch-threshold="1" data-watch data-watch-once >
+							<div class="txt-benefits__paragraph" id="typed-strings">
+								<p><span class="txt-benefits__txt">У 2023 році аудиторія Telegram склала <span class="txt-benefits__txt txt-tt-i-bold">750 мільйонів користувачів.</span> У списку App Store месенджер на першому місці, а кількість його українських користувачів <span class="txt-benefits__txt txt-tt-i-bold">10 мільйонів.</span></span></p>
+							</div>
+							<span id="typed"></span>
 						</div>
 						<div class="benefits__slider slider-benefits">
 							<div class="slider-benefits__wrapper">
@@ -302,13 +307,14 @@
 						<img class="bg-black__bg-img-1" src="@img/background/1.jpg" alt="background">
 						<img class="bg-black__bg-img-2" src="@img/background/2.png" alt="background">
 					</div>
-					<div class="needs__container">
+					<div class="needs__container" data-watch-threshold="0.5" data-watch data-watch-once >
 						<div class="needs__title">
 							<h2 class="needs__title-title title-anim__title txt-tt-i-reg">
 								<span class="needs__title-txt title-anim__txt title-anim__txt-white">Просування в <span class="txt-tt-i-bold">Telegram</span> необхідне для:</span>
 							</h2>
+							<a data-da=".needs__item_btn,1100" href="https://telegram.agency/brief/" class="needs__btn btn">Заповнити бриф</a>
 						</div>
-						<ul data-watch-threshold="0.9" data-watch data-watch-once class="needs__list">
+						<ul data-watch-threshold="0.5" data-watch data-watch-once class="needs__list">
 							<li class="needs__item">
 								<p class="needs__name">Молодих компаній та стартапів</p>
 								<p class="needs__txt txt-salma-pro">яким потрібно регулярно розповідати про продукт</p>
@@ -325,6 +331,7 @@
 								<p class="needs__name">А також для всіх..</p>
 								<p class="needs__txt txt-salma-pro">хто хоче створити успішний тематичний блог чи медіаканал</p>
 							</li>
+							<li class="needs__item_btn"></li>
 						</ul>
 					</div>
 				</section>
@@ -531,21 +538,21 @@
 								<div data-digits-counter data-digits-counter-speed="1000"  class="counter-about__number">5</div>
 								<div class="counter-about__plus txt-tt-i-bold">+</div>
 							</div>
-							<div class="counter-about__txt txt-salma-pro">років просуваємо бренди на ринку</div>
+							<div class="counter-about__txt txt-tt-i-reg">років просуваємо бренди на ринку</div>
 						</div>
 						<div data-watch-threshold="0.8" data-watch data-watch-once class="about__counter counter-about">
 							<div class="counter-about__body">
 								<div data-digits-counter data-digits-counter-speed="1000"  class="counter-about__number">118</div>
 								<div class="counter-about__plus txt-tt-i-bold">+</div>
 							</div>
-							<div class="counter-about__txt txt-salma-pro">успішних кейсів</div>
+							<div class="counter-about__txt txt-tt-i-reg">успішних кейсів</div>
 						</div>
 						<div data-watch-threshold="0.8" data-watch data-watch-once class="about__counter counter-about">
 							<div class="counter-about__body">
 								<div data-digits-counter data-digits-counter-speed="1000"  class="counter-about__number">15</div>
 								<div class="counter-about__plus txt-tt-i-bold">+</div>
 							</div>
-							<div class="counter-about__txt txt-salma-pro">постійних клієнтів</div>
+							<div class="counter-about__txt txt-tt-i-reg">постійних клієнтів</div>
 						</div>
 						<h2 class="about__title-anim title-anim__title txt-tt-i-reg">
 							<span class="about__title-txt title-anim__txt title-anim__txt-white"><span class="txt-tt-i-bold">Про нас</span><br> в цифрах</span>

@@ -2,6 +2,37 @@
 import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
+import Typed from 'typed.js';
+
+
+// Function to initialize Typed.js
+function initializeTyped() {
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 10,
+    loop: false,
+    showCursor: false,
+  });
+}
+
+// Intersection Observer to detect element visibility
+const typedElement = document.getElementById('typed'); // Get the element by ID
+
+if (typedElement) { // Check if the element exists
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          initializeTyped();
+          observer.unobserve(entry.target); // Stop observing after initializing
+        }
+      });
+    },
+    { threshold: 0.1 } // Adjust the threshold as needed
+  );
+
+  observer.observe(typedElement); // Observe the element
+}
 
 // Подключение через NPM (в данном проекте не используется):
 // import { gsap } from "gsap";
@@ -31,7 +62,7 @@ if (container) {
       scrollTrigger: {
         trigger: container,
         pin: true,
-        scrub: 2,
+        scrub: 1,
         start: "top top",
         end: "bottom",
         // markers: true,
@@ -46,7 +77,7 @@ if (container) {
       scrollTrigger: {
         trigger: ".benefits",
         pin: true,
-        scrub: 2,
+        scrub: 1,
         start: "top top",
         end: "bottom",
         // markers: true,
@@ -184,41 +215,41 @@ if (cursorTeam) {
 
 
 // SERVICES PAGE opacity img on hover events ======================================================
-const listNeedServiceTxt = document.querySelectorAll('.list-need-service__txt');
-const gifImg = document.querySelectorAll('.gif-img');
-if (listNeedServiceTxt) {
-  listNeedServiceTxt.forEach((textItem, index) => {
-    textItem.addEventListener('mouseenter', () => {
-      if (index < gifImg.length) {
-        gifImg[index].classList.add('_active');
-      }
-    });
+// const listNeedServiceTxt = document.querySelectorAll('.list-need-service__txt');
+// const gifImg = document.querySelectorAll('.gif-img');
+// if (listNeedServiceTxt) {
+//   listNeedServiceTxt.forEach((textItem, index) => {
+//     textItem.addEventListener('mouseenter', () => {
+//       if (index < gifImg.length) {
+//         gifImg[index].classList.add('_active');
+//       }
+//     });
 
-    textItem.addEventListener('mouseleave', () => {
-      if (index < gifImg.length) {
-        gifImg[index].classList.remove('_active');
-      }
-    });
-  });
-}
+//     textItem.addEventListener('mouseleave', () => {
+//       if (index < gifImg.length) {
+//         gifImg[index].classList.remove('_active');
+//       }
+//     });
+//   });
+// }
 
 // ДОбавление класса к .need-service__gif если элементов больше или меньше 4х ==========
 // Получаем родительский элемент
-const gifContainer = document.querySelector('.need-service__gif');
-if (gifContainer) {
+// const gifContainer = document.querySelector('.need-service__gif');
+// if (gifContainer) {
 
-  // Получаем все элементы need-service__gif-item
-  const gifItems = gifContainer.querySelectorAll('.need-service__gif-item');
+//   // Получаем все элементы need-service__gif-item
+//   const gifItems = gifContainer.querySelectorAll('.need-service__gif-item');
   
-  // Проверяем количество элементов
-  if (gifItems.length < 4) {
-    // Добавляем класс к родительскому элементу
-    gifContainer.classList.add('_el-less-than');
-  } else {
-    // Удаляем класс у родительского элемента
-    gifContainer.classList.remove('_el-less-than');
-  }
-}
+//   // Проверяем количество элементов
+//   if (gifItems.length < 4) {
+//     // Добавляем класс к родительскому элементу
+//     gifContainer.classList.add('_el-less-than');
+//   } else {
+//     // Удаляем класс у родительского элемента
+//     gifContainer.classList.remove('_el-less-than');
+//   }
+// }
 
 
 

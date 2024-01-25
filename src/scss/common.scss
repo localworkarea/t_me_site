@@ -1,4 +1,9 @@
 // Заголовки, загальні БЕМ блоки та інше...
+[class*="__container-s"] {
+  max-width: rem(1176);
+  margin: 0 auto;
+  padding: 0 rem(16);
+}
 .wrapper {
   &::before {
     content: '';

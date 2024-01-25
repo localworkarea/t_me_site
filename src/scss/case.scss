@@ -207,17 +207,30 @@ display: flex;
     flex-direction: column;
     justify-content: center;
 
+    >p {
+      font-family: 'Salma Pro', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      @include adaptiveValue("font-size", 32, 24, 0, 1920, 1440);
+      @include adaptiveValue("font-size", 24, 20, 3, 1440, 768);
+      @include adaptiveValue("font-size", 20, 14, 3, 768, 360);
+      line-height: calc(40/32);
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 48, 40, 0, 768, 360);
+      }
+    }
+
     @extend %animate;
   }
   // .promo-case__txt
   &__txt {
-    @include adaptiveValue("font-size", 32, 24, 0, 1920, 1440);
-    @include adaptiveValue("font-size", 24, 20, 3, 1440, 768);
-    @include adaptiveValue("font-size", 20, 14, 3, 768, 360);
-    line-height: calc(40/32);
-    &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 48, 40, 0, 768, 360);
-    }
+    // @include adaptiveValue("font-size", 32, 24, 0, 1920, 1440);
+    // @include adaptiveValue("font-size", 24, 20, 3, 1440, 768);
+    // @include adaptiveValue("font-size", 20, 14, 3, 768, 360);
+    // line-height: calc(40/32);
+    // &:not(:last-child) {
+    //   @include adaptiveValue("margin-bottom", 48, 40, 0, 768, 360);
+    // }
   }
 	// .promo-case__image
 	&__image {

@@ -26,7 +26,105 @@
 	// .header__menu
 	&__menu {
 	}
+	// .header__lang
+	&__lang {
+	}
 }
+		
+.lang-header {
+	margin-right: rem(20);
+	@media (max-width:$mobileSmall){
+		margin-right: rem(10);
+	}
+		// .lang-header__body
+		&__body {
+			
+		}
+		// .lang-header__img
+		&__img {
+			width: rem(38);
+			height: auto;
+			// filter: invert(89%) sepia(1%) saturate(1245%) hue-rotate(191deg) brightness(77%) contrast(77%);
+			filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(116deg) brightness(113%) contrast(113%);
+			@media (max-width:$mobileSmall){
+				 width: rem(32); 
+			}
+		}
+		// .lang-header__box
+		&__box {
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: rem(10);
+			padding: rem(10);
+			cursor: pointer;
+			transition: all .45s ease;
+			&:hover {
+				.lang-header__drop {
+					opacity: 1;
+					transform: translateY(0);
+					pointer-events: all;
+				}
+			}
+		}
+		// .lang-header__txt
+		&__txt {
+			// color: #A4A5A9;
+			color: white;
+			font-family: "Salma Pro", sans-serif;
+			font-size: rem(20);
+			font-style: normal;
+			font-weight: 500;
+			line-height: 1.2;
+			@media (max-width:$mobileSmall){
+				 font-size: rem(16);
+			}
+		}
+		// .lang-header__drop
+		&__drop {
+			position: absolute;
+			width: 100%;
+			top: rem(53);
+			right: 0;
+			padding: rem(10);
+			display: flex;
+			flex-direction: column;
+			border-radius: rem(10);
+			border: rem(1) solid white;
+			background-color:#000206;
+
+			opacity: 0;
+			transform: translateY(30px);
+			pointer-events: none;
+			transition: all 0.45s ease;
+		}
+		// .lang-header__link
+		&__link {
+			// color: #A4A5A9;
+			color: white;
+			display: block;
+			width: 100%;
+			text-align: center;
+			font-family: "Salma Pro", sans-serif;
+			font-size: rem(20);
+			font-style: normal;
+			font-weight: 500;
+			line-height: 1.2;
+			padding: rem(10) 0;
+			transition: all .3s ease;
+			&:not(:last-child) {
+				border-bottom: rem(1) solid white;
+			}
+			&:hover {
+				color: #A4A5A9;
+			}
+			@media (max-width:$mobileSmall){
+				font-size: rem(16);
+		 	}
+		}
+	
+}
+
 
 // == MENU =========================
 .menu {
@@ -363,6 +461,7 @@
 	&__container {
 		display: flex;
 		justify-content: flex-end;
+		align-items: center;
 	}
 	// .btn-menu__menu
 	&__menu {

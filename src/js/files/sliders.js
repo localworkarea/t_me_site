@@ -7,7 +7,17 @@
 // Підключаємо слайдер Swiper з node_modules
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
+
+
+// = раскоментировать на Thinkpad T460
 import Swiper, { Navigation, Autoplay, Pagination, Manipulation, EffectFade } from 'swiper';
+// =========================
+
+// = раскоментировать на Thinkpad P53
+// import Swiper from 'swiper';
+// import { Navigation, Autoplay, Pagination } from 'swiper/modules';
+// =========================
+
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 

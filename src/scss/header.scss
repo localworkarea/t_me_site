@@ -236,7 +236,7 @@
 	}
 	// .menu__list-wrapp
 	&__list-wrapp {
-		@media (max-width:1600px){
+		@media (min-width:1200px){
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
